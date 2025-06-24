@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>friendsConsulting</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #012037;
+      color: #f1f1f1;
+    }
+    .nav-link {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(to right, #9ff5cf, #00cfff); /* Mint to Sky Blue */
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  </style>
+   <style>
+    
+
+    @keyframes typing {
+      0% { width: 0 }
+      50% { width: 100% }
+      100% { width: 0 }
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent }
+      50% { border-color: black }
+    }
+
+    .typing {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid black;
+      animation: typing 4s steps(30, end) infinite, blink 0.7s step-end infinite;
+    }
+    
+  </style>
+</head>
+
+<body class="text-white font-sans">
+
+  <!-- Header/Navbar -->
+  <header id="navbar" class="sticky top-0 z-50 bg-white/60 backdrop-blur-md transition-all duration-300 shadow">
+
+    <div class="max-w-2xl mx-auto flex justify-between items-center px-1.5">
+      <a href="#">
+        <img src="photos/logo.png" alt="Logo" class="h-16 w-auto " />
+      </a>
+      <nav class="space-x-4">
+        <a href="#services" class="nav-link text-[#06333d] ">Services</a>
+        <a href="#about" class="nav-link text-[#06333d] ">About</a>
+        <a href="#contact" class="nav-link text-[#06333d] ">Contact</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+
+  <section class="text-center py-20 bg-gradient-to-r from-[#9ff5cf] to-[#00cfff] text-black">
+    <div class="inline-block">
+      <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2"> Welcome </h2>
+      <h2 class="typing text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2">
+        to friends Consulting👋
+      </h2>
+    </div>
+  </section>
+
+
+<!-- Services -->
+<section id="services" class="py-16 bg-[#062f38] text-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-3xl font-bold mb-10 text-center">Services We Offer</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Each Service Box -->
+      <div class="bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+        <h4 class="text-xl font-semibold text-cyan-400 mb-2">🔊 Sound Vendor</h4>
+        <p>Professional audio setup for all events.</p>
+      </div>
+
+      <div class="bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+        <h4 class="text-xl font-semibold text-cyan-400 mb-2">💡 Light Vendor</h4>
+        <p>Dynamic lighting setups for events and shoots.</p>
+      </div>
+
+      <div class="bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+        <h4 class="text-xl font-semibold text-cyan-400 mb-2">📸 Photography</h4>
+        <p>Capturing memories with creativity and quality.</p>
+      </div>
+
+      <div class="bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+        <h4 class="text-xl font-semibold text-cyan-400 mb-2">💻 Web Design & Creation</h4>
+        <p>Stylish and responsive websites built to impress.</p>
+      </div>
+
+      <div class="bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+        <h4 class="text-xl font-semibold text-cyan-400 mb-2">🎁 Gifts & Customization</h4>
+        <p>Personalized gifts for your loved ones.</p>
+      </div>
+
+      <div class="bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+        <h4 class="text-xl font-semibold text-cyan-400 mb-2">📅 Events Management</h4>
+        <p>Complete planning & execution of your events.</p>
+      </div>
+
+      <div class="bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+        <h4 class="text-xl font-semibold text-cyan-400 mb-2">🎓 Career Counselling</h4>
+        <p>Guidance and mentorship for career paths.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- About -->
+<section id="about" class="py-16 bg-[#06333d] text-white">
+  <div class="max-w-4xl mx-auto text-center px-4">
+    <h3 class="text-4xl font-bold mb-6 inline-block text-cyan-400 typing-text">About Us</h3>
+    <p class="text-gray-200 text-lg leading-relaxed hover:text-cyan-200 transition duration-300">
+      <span class="font-semibold text-cyan-400">Friends Consulting</span> is your all-in-one destination for creating unforgettable experiences. 
+      From mesmerizing <span class="text-cyan-300">sound and light setups</span> to capturing timeless moments with our <span class="text-cyan-300">photography services</span>, 
+      we bring creativity and precision to every event.
+      <br /><br />
+      We also offer modern <span class="text-cyan-300">web design and creation</span> solutions, 
+      along with personalized <span class="text-cyan-300">gift customization</span> that makes every occasion unique. 
+      Whether you're planning a grand celebration or seeking <span class="text-cyan-300">career counselling</span>, 
+      our expert team ensures a seamless, professional experience from start to finish.
+      <br /><br />
+      At Friends Consulting, we don't just plan events — we craft memories that last a lifetime.
+    </p>
+  </div>
+</section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-12 bg-[#06333d]">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="md:flex md:justify-between md:space-x-10">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+          <p class="mb-4 text-lg"><i class="fa-solid fa-envelope text-red-400 mr-2"></i> friendsconsulting@gmail.com</p>
+          <p class="mb-4 text-lg"><i class="fa-solid fa-phone text-red-400 mr-2"></i> +91 8420566682</p>
+          <div class="social-icons mt-6 space-x-4 text-2xl">
+            <a href="#" class="text-white hover:text-blue-500"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/918420566682" class="text-white hover:text-[#25D366]"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-white hover:text-pink-500"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <a href="cv.pdf" download class="inline-block mt-6 px-5 py-2 bg-[#ff004f] text-white rounded-full hover:bg-[#430417] transition">Download CV</a>
+        </div>
+        <div class="md:w-1/2">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required class="w-full bg-gray-800 text-white p-3 rounded mb-4">
+            <input type="email" name="email" placeholder="Your Email" required class="w-full bg-gray-800 text-white p-3 rounded mb-4">
+            <textarea name="Message" rows="6" placeholder="Your Message" class="w-full bg-gray-800 text-white p-3 rounded mb-4 resize-none"></textarea>
+            <button type="submit" class="px-6 py-2 bg-[#ff004f] text-white rounded-full hover:bg-[#430417] transition">Submit</button>
+          </form>
+          <span id="msg" class="text-green-400 mt-3 block"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-12 text-center bg-[#03272f] text-white py-4">
+    <p>© friends Consulting. All rights reserved. Made with <i class="fas fa-heart text-[#ff004f]"></i> by Rupam Ghosh & Abheek Samaddar.</p>
+  </footer>
+
+</body>
+</html>
