@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Career Counselling - Friends Consulting</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="../photos/logo.jpg" />
+    <link rel="icon" type="image/png" href="photos/logo.jpg" />
     <style>
       body {
         background-color: #155e95;
@@ -23,67 +23,119 @@
       🎓 Our Career Counselling Team
     </h1>
 
-    <!-- Profile Container -->
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
-      <!-- Left Box -->
+    <!-- Career Counselling Programs Section -->
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- For Students -->
       <div
-        class="flex-1 bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow cursor-pointer transition-all border border-transparent hover:border-cyan-400 hover:shadow-xl hover:scale-105 text-center overflow-hidden transition-max-height"
-        onclick="toggleBox(this)"
-        style="max-height: 240px"
+        class="bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-cyan-400/50 hover:scale-105 transition-all duration-300"
       >
-        <img
-          src="https://via.placeholder.com/120"
-          alt=""
-          class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 border-4 border-cyan-400"
-        />
-        <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-          tenetur dolorem maiores doloribus perferendis. Neque iste
-          exercitationem eos, omnis, reiciendis doloremque modi molestias harum
-          sunt quisquam, aliquam quos? Repudiandae, saepe? Voluptatibus
-          obcaecati, dolores rem, deserunt fuga id minus ad hic quas error
-          blanditiis. Vitae dolore delectus accusantium autem consequatur
-          tempora aliquid placeat temporibus. Harum voluptatem dignissimos
-          expedita laborum ad. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Impedit placeat asperiores aliquam.
+        <div class="flex items-center gap-4 mb-4">
+          <img
+            src="https://img.icons8.com/ios-filled/100/ffffff/student-male.png"
+            alt="Student Icon"
+            class="w-12 h-12"
+          />
+          <h2 class="text-xl sm:text-2xl font-bold text-white">For Students</h2>
+        </div>
+        <h3 class="text-lg font-semibold text-pink-300">Class 8-9</h3>
+        <p class="text-cyan-100 font-medium mb-2">Stream & Subject Selection</p>
+        <p class="text-gray-200 text-sm sm:text-base leading-relaxed mb-4">
+          Advanced assessment & personalised guidance to help you select the
+          perfect stream and subjects that align you to the right careers.
         </p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdQvmROA9SrpC_sDFj7wwEAoJuutG39GAP2Rkov1WdsAfMedw/viewform?usp=header" target="_blank"
+          class="inline-block mt-2 px-5 py-2 bg-cyan-600 text-white rounded-full hover:bg-black transition hover:scale-105 shadow-md"
+        >
+          Book a call with expert
+        </a>
       </div>
 
-      <!-- Right Box -->
+      <!-- For Institutions -->
       <div
-        class="flex-1 bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow cursor-pointer transition-all border border-transparent hover:border-cyan-400 hover:shadow-xl hover:scale-105 text-center overflow-hidden transition-max-height"
-        onclick="toggleBox(this)"
-        style="max-height: 240px"
+        class="bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-cyan-400/50 hover:scale-105 transition-all duration-300"
       >
-        <img
-          src="https://via.placeholder.com/120"
-          alt=""
-          class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 border-4 border-cyan-400"
-        />
-        <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-          numquam quae eos autem. Voluptate, consectetur magnam sunt blanditiis
-          a dolore, explicabo eligendi nostrum culpa consequatur recusandae
-          tenetur illum provident minus. Nihil accusantium unde repellendus
-          possimus officiis temporibus voluptatum laborum? Cupiditate, minus!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. In obcaecati
-          porro saepe ab. Perspiciatis sint vero laborum veritatis?
+        <div class="flex items-center gap-4 mb-4">
+          <img
+            src="https://img.icons8.com/ios-filled/100/ffffff/teacher.png"
+            alt="Teacher Icon"
+            class="w-12 h-12"
+          />
+          <h2 class="text-xl sm:text-2xl font-bold text-white">For Institutions</h2>
+        </div>
+        <h3 class="text-lg font-semibold text-pink-300">Class 10-12</h3>
+        <p class="text-cyan-100 font-medium mb-2">Career Selection & Planning</p>
+        <p class="text-gray-200 text-sm sm:text-base leading-relaxed mb-4">
+          Expert guidance & 5-dimensional assessment to help you discover your
+          perfect career and choose the right course and college.
         </p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdQvmROA9SrpC_sDFj7wwEAoJuutG39GAP2Rkov1WdsAfMedw/viewform?usp=header" target="_blank"
+          class="inline-block mt-2 px-5 py-2 bg-cyan-600 text-white rounded-full hover:bg-black transition hover:scale-105 shadow-md"
+        >
+          Book a call with expert
+        </a>
       </div>
     </div>
 
-    <!-- Script to Expand -->
-    <script>
-      function toggleBox(box) {
-        const collapsedHeight = 240;
-        const expandedHeight = 1500;
+ <!-- Team Profiles Section -->
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 mt-16">
+  <!-- Profile Card -->
+  <div
+    class="team-box group flex-1 bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg text-center transform transition duration-700 scale-95 opacity-0"
+  >
+    <img
+      src="assets/Rupam_profile_pic.jpg"
+      alt="Rupam Ghosh"
+      class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 border-4 border-cyan-400 group-hover:scale-110 transition-transform duration-500"
+    />
+    <h3 class="text-xl text-cyan-300 font-semibold mb-2">Rupam Ghosh</h3>
+    <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+      🚀 I'm Rupam, your go-to guide for turning career confusion into clarity!
+      With a passion for empowering students, I blend tech, trends, and talent
+      mapping to help you discover your perfect path. Let’s decode your future,
+      one smart step at a time. 💡🎯
+    </p>
+  </div>
 
-        if (box.style.maxHeight === expandedHeight + "px") {
-          box.style.maxHeight = collapsedHeight + "px";
-        } else {
-          box.style.maxHeight = expandedHeight + "px";
+  <!-- Another Profile Card -->
+  <div
+    class="team-box group flex-1 bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg text-center transform transition duration-700 scale-95 opacity-0"
+  >
+    <img
+      src="assets/Pritam_profile_pic.jpg"
+      alt="Pritam Das"
+      class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 border-4 border-cyan-400 group-hover:scale-110 transition-transform duration-500"
+    />
+    <h3 class="text-xl text-cyan-300 font-semibold mb-2">Pritam Das</h3>
+    <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+      💼 He is a smart business advisor, a creative freelancer,
+       and a skilled marketing expert. 
+       He helps students and small businesses grow by 
+       giving the right advice and smart ideas. 
+       From planning to promotion, he knows how to turn 
+       big dreams into real success. 🚀📊
+    </p>
+  </div>
+</div>
+
+    <!-- Expand Script -->
+    <script>
+  // Animate cards when they scroll into view
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("scale-100", "opacity-100");
+          entry.target.classList.remove("scale-95", "opacity-0");
         }
-      }
-    </script>
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  document.querySelectorAll(".team-box").forEach((el) => observer.observe(el));
+</script>
+
   </body>
 </html>
