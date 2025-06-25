@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📸 Photography</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Counselling - Friends Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="photos/logo.jpg" />
+    <style>
+        body {
+            background-color: #155e95;
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in-start {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body>
-    <h1>work in progress</h1>
+
+<body class="text-white font-sans min-h-screen py-10 px-4 sm:px-6 md:px-10">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 text-cyan-300">
+        🎓 Our Photographer
+    </h1>
+
+    <!-- Photographer Card Section -->
+    <div class="max-w-2xl mx-auto">
+        <div id="photoCard"
+            class="fade-in bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-400/50 hover:scale-105 transform text-center">
+            <!-- Centered Larger Image -->
+            <img src="krishno-pokhho.png" alt="Krishno Pokhho" class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-4" />
+            <!-- Name Below Image -->
+            <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">
+                Krishno - Pokhho
+            </h2>
+
+            <!-- Description -->
+            <p class="text-gray-200 text-sm sm:text-base leading-relaxed mb-4">
+                Krishno - Pokhho is a band photography collective that captures the raw energy, emotion, and soul of
+                live music. From electrifying stage moments to behind-the-scenes stills, we freeze the spirit of bands
+                in motion. Whether its a live gig, studio session, or promo shoot — we turn sound into unforgettable
+                visuals.
+            </p>
+
+            <!-- Button -->
+            <a href="samples.html"
+                target="_blank"
+                class="inline-block mt-2 px-5 py-2 bg-cyan-600 text-white rounded-full hover:bg-black transition hover:scale-105 shadow-md">
+                View Samples
+            </a>
+        </div>
+    </div>
+
+    <!-- Script to trigger fade-in on load -->
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const card = document.getElementById("photoCard");
+            setTimeout(() => {
+                card.classList.add("fade-in-start");
+            }, 100); // slight delay to trigger transition
+        });
+    </script>
 </body>
+
 </html>

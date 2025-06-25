@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krishno - Pokhho: Band Photography Samples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #0f2e45;
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+
+      .fade-in-start {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="text-white font-sans min-h-screen py-10 px-4">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-cyan-300 mb-10 fade-in" id="galleryTitle">
+      🎵 Band Photography by Krishno - Pokhho
+    </h1>
+
+    <div id="galleryGrid" class="fade-in max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Image Cards -->
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample1.jpeg" alt="Band 1" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample2.jpeg" alt="Band 2" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample3.jpeg" alt="Band 3" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample4.jpeg" alt="Band 4" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample5.jpg" alt="Band 5" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample6.jpg" alt="Band 6" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample7.jpg" alt="Band 7" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample8.jpg" alt="Band 8" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample9.jpg" alt="Band 9" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample10.jpg" alt="Band 10" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample11.jpg" alt="Band 11" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample12.jpg" alt="Band 12" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample13.jpg" alt="Band 13" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample14.jpg" alt="Band 14" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample15.jpg" alt="Band 15" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
+        <img src="sample16.jpg" alt="Band 16" class="w-full h-64 object-cover rounded-lg" />
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("galleryGrid").classList.add("fade-in-start");
+        document.getElementById("galleryTitle").classList.add("fade-in-start");
+      });
+    </script>
+  </body>
+</html>
