@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Editing Plans | Friends Consulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #155e95;
+    }
+    .plan-container {
+      position: relative;
+      width: 768px;
+      max-width: 100%;
+      min-height: 480px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+    }
+    .plan-container .panel {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      transition: all 0.6s ease-in-out;
+      padding: 2rem;
+    }
+    .basic-panel {
+      background: linear-gradient(to right, #00bcd4, #0d9ca5);
+      z-index: 2;
+    }
+    .premium-panel {
+      background: linear-gradient(to right, #f6c96e, #d4a72b);
+      z-index: 1;
+      opacity: 0;
+    }
+    .plan-container.active .basic-panel {
+      transform: translateX(100%);
+      opacity: 0;
+      z-index: 1;
+    }
+    .plan-container.active .premium-panel {
+      transform: translateX(0);
+      opacity: 1;
+      z-index: 2;
+    }
+    .toggle-tabs {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .toggle-tabs button {
+      margin: 0 1rem;
+      padding: 0.4rem 1rem;
+      background-color: #ffffff22;
+      border: 1px solid #ffffff55;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .toggle-tabs button:hover {
+      background-color: #ffffff55;
+    }
+    .sample-btn {
+      display: inline-block;
+      margin: 0.25rem 0.4rem;
+      padding: 0.3rem 0.8rem;
+      background-color: rgba(0,0,0,0.2);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .sample-btn:hover {
+      background-color: rgba(0,0,0,0.4);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body class="text-white font-sans min-h-screen py-10 px-4">
+  <h1 class="text-3xl font-bold text-center text-cyan-300 mb-8">🎬 <i>Choose Your Video Editing Plan</i></h1>
+
+  <div class="toggle-tabs">
+    <button onclick="showBasic()">Basic Plan</button>
+    <button onclick="showPremium()">Premium Plan</button>
+  </div>
+
+  <div class="plan-container" id="planContainer">
+    <!-- Basic Plan -->
+    <div class="panel basic-panel text-center text-white">
+      <h2 class="text-2xl font-bold mb-2">Basic Plan</h2>
+      <p class="mb-4">@ ₹499 | Full HD (up to 1080p)</p>
+      <ul class="mb-4">
+        <li>✔ Simple Edits</li>
+        <li>✔ Color Correction</li>
+        <li>✔ Transitions</li>
+      </ul>
+<div class="flex flex-wrap justify-center gap-4 mt-6">
+  <a
+    href="sample1.mp4"
+    target="_blank"
+    class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded transition"
+  >
+    🎬 Watch Sample 1
+  </a>
+
+  <a
+    href="sample2.mp4"
+    target="_blank"
+    class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded transition"
+  >
+    🎬 Watch Sample 2
+  </a>
+
+  <a
+    href="sample3.mp4"
+    target="_blank"
+    class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded transition"
+  >
+    🎬 Watch Sample 3
+  </a>
+</div>
+
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="panel premium-panel text-center text-white">
+      <h2 class="text-2xl font-bold mb-2">Premium Plan</h2>
+      <p class="mb-4">@ ₹799 | 4K - 8K Quality</p>
+      <ul class="mb-4">
+        <li>✔ Professional Edits</li>
+        <li>✔ Cinematic Effects</li>
+        <li>✔ Color Grading</li>
+      </ul>
+      <div class="flex flex-wrap justify-center gap-4 mt-6">
+  <a
+    href="premium_sample1.mp4"
+    target="_blank"
+    class="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black font-semibold px-4 py-2 rounded transition"
+  >
+    🌟 Premium Sample 1
+  </a>
+
+  <a
+    href="premium_sample2.mp4"
+    target="_blank"
+    class="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black font-semibold px-4 py-2 rounded transition"
+  >
+    🌟 Premium Sample 2
+  </a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="text-center mt-10">
+    <a href="../video.html" class="text-cyan-300 underline hover:text-white">← Back to Editors</a>
+  </div>
+
+  <script>
+    function showBasic() {
+      document.getElementById("planContainer").classList.remove("active");
+    }
+    function showPremium() {
+      document.getElementById("planContainer").classList.add("active");
+    }
+  </script>
+  <footer class="mt-12 text-center text-sm text-gray-300 border-t border-gray-600 pt-6 pb-4 space-y-2">
+  <p>&copy; 2025 Friends Consulting. All rights reserved.</p>
+  <p class="text-xs text-red-300 max-w-xl mx-auto px-4">
+    ⚠ All video samples showcased on this page are the intellectual property of the respective editor. Unauthorized use, reproduction, or distribution of any content without explicit permission is strictly prohibited. Legal action may be pursued for misuse.
+  </p>
+</footer>
+
+</body>
+
+
+</html>
