@@ -11,24 +11,30 @@
         background-color: #155e95;
       }
 
-      .transition-max-height {
-        transition: max-height 0.7s ease, padding 0.5s ease;
+      @keyframes fadeInScale {
+        0% {
+          opacity: 0;
+          transform: scale(0.75);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .fade-in-scale {
+        animation: fadeInScale 1s ease-out forwards;
       }
     </style>
   </head>
   <body class="text-white font-sans min-h-screen py-10 px-4 sm:px-6 md:px-10">
 
-    <!-- Navbar -->
-    <nav class="flex justify-between items-center bg-[#0d3b47] px-6 py-4 rounded-xl shadow-lg mb-10">
-      <h1 class="text-xl sm:text-2xl font-bold text-cyan-300">🎓 Career Counselling</h1>
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdQvmROA9SrpC_sDFj7wwEAoJuutG39GAP2Rkov1WdsAfMedw/viewform?usp=header"
-        target="_blank"
-        class="px-5 py-2 bg-cyan-600 text-white rounded-full hover:bg-black transition hover:scale-105 shadow-md"
-      >
-        Book a Call
-      </a>
-    </nav>
+    <!-- Centered Animated Heading -->
+    <div class="flex justify-center mb-10">
+      <h1 class="text-xl sm:text-2xl font-bold text-cyan-300 fade-in-scale">
+        🎓 Career Counselling
+      </h1>
+    </div>
 
     <!-- Team Profiles Section -->
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 mt-4 mb-16">
@@ -94,7 +100,8 @@
           perfect stream and subjects that align you to the right careers.
         </p>
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdQvmROA9SrpC_sDFj7wwEAoJuutG39GAP2Rkov1WdsAfMedw/viewform?usp=header" target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdQvmROA9SrpC_sDFj7wwEAoJuutG39GAP2Rkov1WdsAfMedw/viewform?usp=header"
+          target="_blank"
           class="inline-block mt-2 px-5 py-2 bg-cyan-600 text-white rounded-full hover:bg-black transition hover:scale-105 shadow-md"
         >
           Book a call with expert
@@ -120,7 +127,8 @@
           perfect career and choose the right course and college.
         </p>
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdQvmROA9SrpC_sDFj7wwEAoJuutG39GAP2Rkov1WdsAfMedw/viewform?usp=header" target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdQvmROA9SrpC_sDFj7wwEAoJuutG39GAP2Rkov1WdsAfMedw/viewform?usp=header"
+          target="_blank"
           class="inline-block mt-2 px-5 py-2 bg-cyan-600 text-white rounded-full hover:bg-black transition hover:scale-105 shadow-md"
         >
           Book a call with expert
@@ -130,7 +138,6 @@
 
     <!-- Animate Cards Script -->
     <script>
-      // Animate team profiles when in view
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
