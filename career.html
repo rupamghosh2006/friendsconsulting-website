@@ -17,14 +17,64 @@
     </style>
   </head>
   <body class="text-white font-sans min-h-screen py-10 px-4 sm:px-6 md:px-10">
-    <h1
-      class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 text-cyan-300"
-    >
-      🎓 Our Career Counselling Team
-    </h1>
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center bg-[#0d3b47] px-6 py-4 rounded-xl shadow-lg mb-10">
+      <h1 class="text-xl sm:text-2xl font-bold text-cyan-300">🎓 Career Counselling</h1>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdQvmROA9SrpC_sDFj7wwEAoJuutG39GAP2Rkov1WdsAfMedw/viewform?usp=header"
+        target="_blank"
+        class="px-5 py-2 bg-cyan-600 text-white rounded-full hover:bg-black transition hover:scale-105 shadow-md"
+      >
+        Book a Call
+      </a>
+    </nav>
+
+    <!-- Team Profiles Section -->
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 mt-4 mb-16">
+      <!-- Profile Card -->
+      <div
+        onclick="document.getElementById('counselling-section').scrollIntoView({ behavior: 'smooth' });"
+        class="team-box group flex-1 bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg text-center transform transition duration-700 scale-95 opacity-0 hover:shadow-cyan-400/50 hover:scale-105 cursor-pointer"
+      >
+        <img
+          src="assets/Rupam_profile_pic.jpg"
+          alt="Rupam Ghosh"
+          class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 border-4 border-cyan-400 group-hover:scale-110 transition-transform duration-500"
+        />
+        <h3 class="text-xl text-cyan-300 font-semibold mb-2">Rupam Ghosh</h3>
+        <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+          🚀 I'm Rupam, your go-to guide for turning career confusion into clarity!
+          With a passion for empowering students, I blend tech, trends, and talent
+          mapping to help you discover your perfect path. Let’s decode your future,
+          one smart step at a time. 💡🎯
+        </p>
+      </div>
+
+      <!-- Another Profile Card -->
+      <div
+        onclick="document.getElementById('counselling-section').scrollIntoView({ behavior: 'smooth' });"
+        class="team-box group flex-1 bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg text-center transform transition duration-700 scale-95 opacity-0 hover:shadow-cyan-400/50 hover:scale-105 cursor-pointer"
+      >
+        <img
+          src="assets/Pritam_profile_pic.jpg"
+          alt="Pritam Das"
+          class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 border-4 border-cyan-400 group-hover:scale-110 transition-transform duration-500"
+        />
+        <h3 class="text-xl text-cyan-300 font-semibold mb-2">Pritam Das</h3>
+        <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+          💼 He is a smart business advisor, a creative freelancer,
+          and a skilled marketing expert. 
+          He helps students and small businesses grow by 
+          giving the right advice and smart ideas. 
+          From planning to promotion, he knows how to turn 
+          big dreams into real success. 🚀📊
+        </p>
+      </div>
+    </div>
 
     <!-- Career Counselling Programs Section -->
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div id="counselling-section" class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- For Students -->
       <div
         class="bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-cyan-400/50 hover:scale-105 transition-all duration-300"
@@ -78,64 +128,22 @@
       </div>
     </div>
 
- <!-- Team Profiles Section -->
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 mt-16">
-  <!-- Profile Card -->
-  <div
-    class="team-box group flex-1 bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg text-center transform transition duration-700 scale-95 opacity-0"
-  >
-    <img
-      src="assets/Rupam_profile_pic.jpg"
-      alt="Rupam Ghosh"
-      class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 border-4 border-cyan-400 group-hover:scale-110 transition-transform duration-500"
-    />
-    <h3 class="text-xl text-cyan-300 font-semibold mb-2">Rupam Ghosh</h3>
-    <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
-      🚀 I'm Rupam, your go-to guide for turning career confusion into clarity!
-      With a passion for empowering students, I blend tech, trends, and talent
-      mapping to help you discover your perfect path. Let’s decode your future,
-      one smart step at a time. 💡🎯
-    </p>
-  </div>
-
-  <!-- Another Profile Card -->
-  <div
-    class="team-box group flex-1 bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg text-center transform transition duration-700 scale-95 opacity-0"
-  >
-    <img
-      src="assets/Pritam_profile_pic.jpg"
-      alt="Pritam Das"
-      class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 border-4 border-cyan-400 group-hover:scale-110 transition-transform duration-500"
-    />
-    <h3 class="text-xl text-cyan-300 font-semibold mb-2">Pritam Das</h3>
-    <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
-      💼 He is a smart business advisor, a creative freelancer,
-       and a skilled marketing expert. 
-       He helps students and small businesses grow by 
-       giving the right advice and smart ideas. 
-       From planning to promotion, he knows how to turn 
-       big dreams into real success. 🚀📊
-    </p>
-  </div>
-</div>
-
-    <!-- Expand Script -->
+    <!-- Animate Cards Script -->
     <script>
-  // Animate cards when they scroll into view
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("scale-100", "opacity-100");
-          entry.target.classList.remove("scale-95", "opacity-0");
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
+      // Animate team profiles when in view
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("scale-100", "opacity-100");
+              entry.target.classList.remove("scale-95", "opacity-0");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
 
-  document.querySelectorAll(".team-box").forEach((el) => observer.observe(el));
-</script>
-
+      document.querySelectorAll(".team-box").forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
