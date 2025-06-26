@@ -47,7 +47,7 @@ body{
 }
 
 .container button{
-    background-color: #512da8;
+    background-color: #12a8a0;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -58,6 +58,12 @@ body{
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #0e837d; 
+    transform: scale(1.05);    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .container button.hidden{
