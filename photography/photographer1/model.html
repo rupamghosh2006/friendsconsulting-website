@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Model-Photography Samples | friendsConsulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #155e95;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in-start {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="text-white font-sans min-h-screen py-10 px-4 sm:px-6 md:px-10">
+
+  <h1 class="text-3xl sm:text-4xl font-bold text-center text-cyan-300 mb-10">
+    📸 Photography Samples
+  </h1>
+
+  <!-- Image Grid -->
+  <div id="imageGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto fade-in">
+    
+    <img src="model-sample1.jpeg" alt="Sample 1"
+      class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-auto" />
+
+    <img src="model-sample2.jpeg" alt="Sample 2"
+      class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-auto" />
+
+    <img src="model-sample3.jpeg" alt="Sample 3"
+      class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-auto" />
+
+    <img src="model-sample4.jpeg" alt="Sample 4"
+      class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-auto" />
+
+    <img src="model-sample5.jpeg" alt="Sample 5"
+      class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-auto" />
+
+    <img src="model-sample6.jpeg" alt="Sample 6"
+      class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-auto" />
+
+    <img src="model-sample7.jpeg" alt="Sample 7"
+      class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-auto" />
+
+  </div>
+
+  <!-- Back Button -->
+  <div class="text-center mt-10">
+    <a href="../photographer1/photographer1.html" class="text-cyan-300 underline hover:text-white text-sm">
+      ← Back to Package
+    </a>
+  </div>
+
+  <!-- Script for Fade-In -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.getElementById("imageGrid").classList.add("fade-in-start");
+      }, 200);
+    });
+  </script>
+</body>
+</html>

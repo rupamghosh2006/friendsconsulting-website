@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Premium Photography Samples | friendsConsulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #155e95;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in-start {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="text-white font-sans min-h-screen py-10 px-4 sm:px-6 md:px-10">
+
+  <h1 class="text-3xl sm:text-4xl font-bold text-center text-cyan-400 mb-10">
+    📸 Premium Photography Samples
+  </h1>
+
+  <!-- Image Grid -->
+  <div id="imageGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto fade-in">
+    
+    <div class="w-full aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
+      <img src="sample13.jpg" alt="Sample 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+    </div>
+    <div class="w-full aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
+      <img src="sample14.jpg" alt="Sample 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+    </div>
+    <div class="w-full aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
+      <img src="sample15.jpg" alt="Sample 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+    </div>
+    <div class="w-full aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
+      <img src="sample15.jpg" alt="Sample 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+    </div>
+    <div class="w-full aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
+      <img src="sample10.jpg" alt="Sample 5" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+    </div>
+    <div class="w-full aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
+      <img src="sample11.jpg" alt="Sample 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+    </div>
+  </div>
+
+  <!-- Back Button -->
+  <div class="text-center mt-10">
+    <a href="../photographer1/photographer1.html" class="text-cyan-300 underline hover:text-white text-sm">← Back to Package</a>
+  </div>
+
+  <!-- Script for Fade-In -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.getElementById("imageGrid").classList.add("fade-in-start");
+      }, 200);
+    });
+  </script>
+</body>
+</html>

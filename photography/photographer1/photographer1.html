@@ -1,90 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Krishno - Pokhho: Band Photography Samples</title>
-    <link rel="icon" type="image/png" href="krishno-pokhho.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body {
-        background-color: #0f2e45;
-      }
 
-      .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 1s ease-out, transform 1s ease-out;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography Packages | Friends Consulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="krishno-pokhho.png" />
+  <style>
+    body {
+      background-color: #155e95;
+    }
 
-      .fade-in-start {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    </style>
-  </head>
-  <body class="text-white font-sans min-h-screen py-10 px-4">
-    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-cyan-300 mb-10 fade-in" id="galleryTitle">
-      🎵 Band Photography by <br> <i class="text-cyan-400"> Krishno - Pokhho </i>
-    </h1>
+    .plan-container {
+      position: relative;
+      width: 768px;
+      max-width: 100%;
+      min-height: 480px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+    }
 
-    <div id="galleryGrid" class="fade-in max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <!-- Image Cards -->
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample1.jpeg" alt="Band 1" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample2.jpeg" alt="Band 2" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample3.jpeg" alt="Band 3" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample4.jpeg" alt="Band 4" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample5.jpg" alt="Band 5" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample6.jpg" alt="Band 6" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample7.jpg" alt="Band 7" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample8.jpg" alt="Band 8" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample9.jpg" alt="Band 9" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample10.jpg" alt="Band 10" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample11.jpg" alt="Band 11" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample12.jpg" alt="Band 12" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample13.jpg" alt="Band 13" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample14.jpg" alt="Band 14" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample15.jpg" alt="Band 15" class="w-full h-64 object-cover rounded-lg" />
-      </div>
-      <div class="bg-[#0d3b47] p-4 rounded-xl shadow-lg hover:shadow-cyan-400/50 transition duration-300">
-        <img src="sample16.jpg" alt="Band 16" class="w-full h-64 object-cover rounded-lg" />
-      </div>
+    .plan-container .panel {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      transition: all 0.6s ease-in-out;
+      padding: 2rem;
+    }
+
+    .basic-panel {
+      background: linear-gradient(to right, #00bcd4, #0d9ca5);
+      z-index: 2;
+    }
+
+    .premium-panel {
+      background: linear-gradient(to right, #c19b4f, #d4a72b);
+      z-index: 1;
+      opacity: 0;
+    }
+
+    .plan-container.active .basic-panel {
+      transform: translateX(100%);
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .plan-container.active .premium-panel {
+      transform: translateX(0);
+      opacity: 1;
+      z-index: 2;
+    }
+
+    .toggle-tabs {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .toggle-tabs button {
+      margin: 0 1rem;
+      padding: 0.4rem 1rem;
+      background-color: #ffffff22;
+      border: 1px solid #ffffff55;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+
+    .toggle-tabs button:hover {
+      background-color: #ffffff55;
+    }
+  </style>
+</head>
+
+<body class="text-white font-sans min-h-screen py-10 px-4">
+  <h1 class="text-3xl font-bold text-center text-cyan-300 mb-8">📸 <i>Choose Your Photography Package</i></h1>
+
+  <div class="toggle-tabs">
+    <button onclick="showBasic()">Basic</button>
+    <button onclick="showPremium()">Premium</button>
+  </div>
+
+  <div class="plan-container" id="planContainer">
+    <!-- Basic Photography Plan -->
+    <div class="panel basic-panel text-center text-white">
+      <h2 class="text-2xl font-bold mb-2">Basic Package</h2>
+      <p class="mb-4">@ ₹2499 </p>
+      <ul class="mb-4">
+        <li>✔ HD Quality Edited Photos</li>
+        <!-- <li>✔ 1-Hour Photoshoot</li> -->
+        <!-- <li>✔ Digital Delivery</li> -->
+      </ul>
+      <a href="basic_samples.html"
+        class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded transition">
+        📷 View Sample
+      </a>
     </div>
 
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        document.getElementById("galleryGrid").classList.add("fade-in-start");
-        document.getElementById("galleryTitle").classList.add("fade-in-start");
-      });
-    </script>
-  </body>
+    <!-- Premium Photography Plan -->
+    <div class="panel premium-panel text-center text-white">
+      <h2 class="text-2xl font-bold mb-2">Premium Package</h2>
+      <p class="mb-4">@ ₹4499</p>
+      <ul class="mb-4">
+        <li>✔ Fully Edited Photos</li>
+        <li>✔ 4K Quality photos</li>
+        <!-- <li>✔ 3-Hour Photoshoot</li> -->
+        <!-- <li>✔ Cinematic Edits + Behind The Scenes</li> -->
+      </ul>
+      <a href="premium_samples.html"
+        class="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black font-semibold px-4 py-2 rounded transition">
+        🌟 Premium Sample
+      </a>
+    </div>
+  </div>
+
+  <!-- Existing HTML remains unchanged above this -->
+
+<!-- New Sliding Panel Section Below the First -->
+<h2 class="text-2xl text-center text-white mt-20 mb-4 font-semibold">🎞️ Photography Types</h2>
+<div class="toggle-tabs">
+  <button onclick="showModel()">Model Photography</button>
+  <button onclick="showWedding()">Bridal Photography</button>
+  <button onclick="showBand()">Band Photography</button>
+</div>
+
+<div class="plan-container mt-4" id="photoTypeContainer">
+  <!-- Model Panel -->
+  <div class="panel model-panel text-center text-white">
+    <h2 class="text-2xl font-bold mb-2">Model Photography</h2>
+    <p class="mb-4">Stylized Portraits and Editorial Looks</p>
+    <ul class="mb-4">
+      <li>✔ Creative Direction & Retouching</li>
+    </ul>
+    <a href="model.html"
+      class="inline-block bg-pink-600 hover:bg-pink-700 text-black px-4 py-2 rounded transition">
+      💃 View Gallery
+    </a>
+  </div>
+
+  <!-- Wedding Panel -->
+  <div class="panel wedding-panel text-center text-white">
+    <h2 class="text-2xl font-bold mb-2">Bridal Photography</h2>
+    <p class="mb-4">Golden Moments, Timeless Frames</p>
+    <ul class="mb-4">
+      <li>✔ Candid & Cinematic Shots</li>
+      <li>✔ Shot for Reels also available </li>
+    </ul>
+    <a href="bridal.html"
+      class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-4 py-2 rounded transition">
+      👰 View Gallery
+    </a>
+  </div>
+
+  <!-- Band Panel -->
+  <div class="panel band-panel text-center text-white">
+    <h2 class="text-2xl font-bold mb-2">Band Photography</h2>
+    <p class="mb-4">Live Music & Backstage Energy</p>
+    <ul class="mb-4">
+      <li>✔ Concert & Studio Sessions</li>
+    </ul>
+    <a href="band.html"
+      class="inline-block bg-red-600 hover:bg-red-700 text-black px-4 py-2 rounded transition">
+      🎸 View Gallery
+    </a>
+  </div>
+</div>
+
+<!-- Additional CSS Styles -->
+<style>
+  /* New Panels Styling */
+  .model-panel {
+    background: linear-gradient(to right, #f472b6, #ec4899);
+    z-index: 2;
+  }
+  .wedding-panel {
+    background: linear-gradient(to right, #d7e147, #f3cd4f);
+    z-index: 1;
+    opacity: 0;
+  }
+  .band-panel {
+    background: linear-gradient(to right, #f87171, #dc2626);
+    z-index: 0;
+    opacity: 0;
+  }
+
+  .photo-slides.model-active .model-panel {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .photo-slides.wedding-active .wedding-panel {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .photo-slides.band-active .band-panel {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .photo-slides .panel {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 0;
+  }
+</style>
+
+<!-- Additional JS Logic -->
+<script>
+  const typeContainer = document.getElementById("photoTypeContainer");
+  typeContainer.classList.add("photo-slides", "model-active"); // default
+
+  function resetTypeSlides() {
+    typeContainer.classList.remove("model-active", "wedding-active", "band-active");
+  }
+
+  function showModel() {
+    resetTypeSlides();
+    typeContainer.classList.add("model-active");
+  }
+
+  function showWedding() {
+    resetTypeSlides();
+    typeContainer.classList.add("wedding-active");
+  }
+
+  function showBand() {
+    resetTypeSlides();
+    typeContainer.classList.add("band-active");
+  }
+</script>
+
+  <div class="text-center mt-10">
+    <a href="../photography.html" class="text-cyan-300 underline hover:text-white">← Back to Photographer</a>
+  </div>
+
+  <script>
+    function showBasic() {
+      document.getElementById("planContainer").classList.remove("active");
+    }
+    function showPremium() {
+      document.getElementById("planContainer").classList.add("active");
+    }
+  </script>
+
+  <footer class="mt-12 text-center text-sm text-gray-300 border-t border-white pt-6 pb-4 space-y-2">
+    <p>&copy; 2025 Friends Consulting. All rights reserved.</p>
+    <p class="text-xs text-red-300 max-w-xl mx-auto px-4">
+      ⚠ All photography samples showcased on this page are the intellectual property of the respective artist.
+      Unauthorized use, reproduction, or distribution of any content without explicit permission is strictly
+      prohibited. Legal action may be pursued for misuse.
+    </p>
+  </footer>
+</body>
+
 </html>
