@@ -1,12 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📅 Events Management</title>
-    <link rel="icon" type="image/png" href="../assets/logo.jpg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events - Friends Consulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="editor2_profilePic.jpg" />
+  <style>
+    body {
+      background-color: #155e95;
+    }
+
+    .plan-box {
+      max-width: 768px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+      padding: 2rem;
+      color: #ffffff;
+    }
+
+    .short-plan {
+      background: linear-gradient(to right, #f59e0b, #d97706);
+    }
+
+    .long-plan {
+      background: linear-gradient(to right, #6366f1, #4338ca);
+    }
+  </style>
 </head>
-<body>
-    <h1>work in progress</h1>
+
+<body class="text-white font-sans min-h-screen pb-10 px-4">
+
+  <!-- Floating Navbar -->
+  <header class="sticky top-0 z-50 bg-black bg-opacity-60 backdrop-blur text-white shadow-md">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- <h1 class="text-xl font-bold text-cyan-300">🎉 Friends Consulting</h1> -->
+      <div class="space-x-4 text-sm sm:text-base">
+        <a href="#wedding" class="hover:text-cyan-300 transition">Wedding</a>
+        <a href="#concert" class="hover:text-cyan-300 transition">Concert</a>
+        <a href="#pub" class="hover:text-cyan-300 transition">Pub/Bar</a>
+        <a href="#catering" class="hover:text-cyan-300 transition">Catering</a>
+      </div>
+    </nav>
+  </header>
+
+  <h2 class="text-3xl font-bold text-center text-cyan-300 mt-10 mb-8">🎊 <i>Choose Your Event Plan</i></h2>
+
+  <!-- Wedding Plan -->
+  <div id="wedding" class="plan-box short-plan text-center">
+    <div class="flex justify-center mb-2">
+      <!-- Heart Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-10 h-10 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21.752 7.883a5.5 5.5 0 00-9.193-3.6l-.559.56-.56-.56a5.5 5.5 0 00-7.778 7.778l8.338 8.338a.75.75 0 001.06 0l8.338-8.338a5.5 5.5 0 001.354-5.178z" />
+      </svg>
+    </div>
+    <h2 class="text-2xl font-bold mb-2">Wedding Event</h2>
+    <p class="mb-4">Full Wedding Coverage</p>
+    <ul class="mb-4">
+      <li>✔ Venue Decoration</li>
+      <li>✔ Photography & Videography</li>
+      <li>✔ Guest Management</li>
+    </ul>
+    <div class="mt-6">
+      <a href="mailto:contact@friendsconsulting.com"
+        class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded transition">
+        📩 Contact Us
+      </a>
+    </div>
+  </div>
+
+  <!-- Concert Plan -->
+  <div id="concert" class="plan-box long-plan text-center">
+    <div class="flex justify-center mb-2">
+      <!-- Music Note Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-10 h-10 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zM21 16a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    </div>
+    <h2 class="text-2xl font-bold mb-2">Concert Event</h2>
+    <p class="mb-4">  Live Music Events</p>
+    <ul class="mb-4">
+      <li>✔ Stage & Sound Setup</li>
+      <li>✔ Crowd Management</li>
+      <li>✔ Live Streaming Option</li>
+    </ul>
+    <div class="mt-6">
+      <a href="mailto:contact@friendsconsulting.com"
+        class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded transition">
+        📩 Contact Us
+      </a>
+    </div>
+  </div>
+
+  <!-- Pub/Bar Shows -->
+  <div id="pub" class="plan-box short-plan text-center">
+    <div class="flex justify-center mb-2">
+      <!-- Cocktail Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-10 h-10 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M8.25 6.75L15.75 3M8.25 6.75L12 21M8.25 6.75h12.75M6 21h12" />
+      </svg>
+    </div>
+    <h2 class="text-2xl font-bold mb-2">Pub / Bar Shows</h2>
+    <p class="mb-4"> Nightlife Management</p>
+    <ul class="mb-4">
+      <li>✔ DJ Booking</li>
+      <li>✔ Crowd Engagement</li>
+      <li>✔ Lighting & Ambience</li>
+    </ul>
+    <div class="mt-6">
+      <a href="mailto:contact@friendsconsulting.com"
+        class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded transition">
+        📩 Contact Us
+      </a>
+    </div>
+  </div>
+
+  <!-- Catering Services -->
+  <div id="catering" class="plan-box long-plan text-center">
+    <div class="flex justify-center mb-2">
+      <!-- Utensils Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-10 h-10 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4.5 3.75v16.5m0 0h15m-15 0v-16.5m6 16.5V7.5m6 12.75V7.5" />
+      </svg>
+    </div>
+    <h2 class="text-2xl font-bold mb-2">Catering Services</h2>
+    <p class="mb-4">  Multi-Cuisine Options</p>
+    <ul class="mb-4">
+      <li>✔ Veg & Non-Veg Menus</li>
+      <li>✔ Live Counters</li>
+      <li>✔ Professional Serving Staff</li>
+    </ul>
+    <div class="mt-6">
+      <a href="mailto:contact@friendsconsulting.com"
+        class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded transition">
+        📩 Contact Us
+      </a>
+    </div>
+  </div>
+
+  <div class="text-center mt-10">
+    <a href="../video.html" class="text-cyan-300 underline hover:text-white">← Back to Events</a>
+  </div>
+
+  <footer class="mt-12 text-center text-sm text-gray-300 border-t border-gray-600 pt-6 pb-4 space-y-2">
+    <p>&copy; 2025 Friends Consulting. All rights reserved.</p>
+    <p class="text-xs text-red-300 max-w-xl mx-auto px-4">
+      ⚠ All event plans showcased on this page are curated by Friends Consulting. Reuse or reproduction of any listed
+      service structure without permission is strictly prohibited and may result in legal consequences.
+    </p>
+  </footer>
+
 </body>
+
 </html>
