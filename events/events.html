@@ -149,8 +149,9 @@
     </div>
   </div>
 
+
   <div class="text-center mt-10">
-    <a href="../video.html" class="text-cyan-300 underline hover:text-white">← Back to Events</a>
+    <a href="../index.html" class="text-cyan-300 underline hover:text-white">← Back to Home</a>
   </div>
 
   <footer class="mt-12 text-center text-sm text-gray-300 border-t border-gray-600 pt-6 pb-4 space-y-2">
@@ -160,6 +161,50 @@
       service structure without permission is strictly prohibited and may result in legal consequences.
     </p>
   </footer>
+
+  <!-- Floating Contact Box -->
+<div id="contactToggle" class="fixed bottom-6 right-6 z-50">
+  <!-- Toggle Button -->
+  <button onclick="toggleContact()" id="contactButton"
+    class="bg-cyan-600 hover:bg-cyan-700 text-white text-xl p-4 rounded-full shadow-lg hover:shadow-cyan-400/50 transition-all duration-300">
+    📞
+  </button>
+
+  <!-- Hidden Contact Box -->
+  <div id="contactBox"
+    class="mt-4 opacity-0 scale-95 pointer-events-none transition-all duration-500 transform">
+    <div
+      class="bg-[#0d3b47] text-center rounded-xl px-4 py-3 shadow-lg text-white max-w-xs w-64 hover:shadow-cyan-400/50">
+      <h3 class="text-base font-semibold text-cyan-300">📞 Contact Us</h3>
+      <p class="text-sm font-medium">+91 8420566682</p>
+      <p class="text-sm font-medium">+91 8079048424</p>
+      <a href="mailto:friendsconsulting@email.com"
+        class="text-cyan-300 underline text-sm mt-2 inline-block hover:text-white">
+        ✉️ Send Email
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- JS Script -->
+<script>
+  const box = document.getElementById('contactBox');
+  const btn = document.getElementById('contactButton');
+
+  function toggleContact() {
+    const isOpen = box.classList.contains('opacity-100');
+
+    if (isOpen) {
+      box.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
+      box.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+      btn.classList.remove('shadow-cyan-400/50');
+    } else {
+      box.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+      box.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
+      btn.classList.add('shadow-cyan-400/50');
+    }
+  }
+</script>
 
 </body>
 
