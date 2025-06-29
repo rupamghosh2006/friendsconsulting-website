@@ -51,8 +51,8 @@
   <!-- Wedding Plan -->
   <div id="wedding" class="plan-box short-plan text-center">
     <div class="flex justify-center mb-2">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-10 h-10 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-10 h-10 text-white">
         <path stroke-linecap="round" stroke-linejoin="round"
           d="M21.752 7.883a5.5 5.5 0 00-9.193-3.6l-.559.56-.56-.56a5.5 5.5 0 00-7.778 7.778l8.338 8.338a.75.75 0 001.06 0l8.338-8.338a5.5 5.5 0 001.354-5.178z" />
       </svg>
@@ -75,8 +75,8 @@
   <!-- Concert Plan -->
   <div id="concert" class="plan-box long-plan text-center">
     <div class="flex justify-center mb-2">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-10 h-10 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-10 h-10 text-white">
         <path stroke-linecap="round" stroke-linejoin="round"
           d="M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zM21 16a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
@@ -99,8 +99,8 @@
   <!-- Pub/Bar Shows -->
   <div id="pub" class="plan-box short-plan text-center">
     <div class="flex justify-center mb-2">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-10 h-10 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-10 h-10 text-white">
         <path stroke-linecap="round" stroke-linejoin="round"
           d="M8.25 6.75L15.75 3M8.25 6.75L12 21M8.25 6.75h12.75M6 21h12" />
       </svg>
@@ -123,8 +123,8 @@
   <!-- Catering Services -->
   <div id="catering" class="plan-box long-plan text-center">
     <div class="flex justify-center mb-2">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-10 h-10 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-10 h-10 text-white">
         <path stroke-linecap="round" stroke-linejoin="round"
           d="M4.5 3.75v16.5m0 0h15m-15 0v-16.5m6 16.5V7.5m6 12.75V7.5" />
       </svg>
@@ -144,34 +144,9 @@
     </div>
   </div>
 
-  <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 text-center">
-    <!-- Back to Home -->
-    <a href="../index.html" class="text-cyan-300 underline hover:text-white text-lg">← Back to Home</a>
-
-    <!-- Contact Toggle Button and Box -->
-    <div class="relative">
-      <!-- Toggle Button -->
-      <button onclick="toggleContact()" id="contactButton"
-        class="bg-cyan-600 hover:bg-cyan-700 text-white text-2xl p-3 rounded-full shadow-md transition-all duration-300">
-        📞
-      </button>
-
-      <!-- Contact Box -->
-      <div id="contactBox"
-         class="absolute left-1/2 transform -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-0 mt-2 opacity-0 scale-95 translate-x-20 pointer-events-none transition-all duration-500 transition-transform w-72 max-w-[90vw] z-10">
-        <div class="bg-[#0d3b47] text-center rounded-xl px-4 py-3 shadow-lg text-white">
-          <h3 class="text-base font-semibold text-cyan-300">📞 Contact Us</h3>
-          <p class="text-sm font-medium">+91 8420566682</p>
-          <p class="text-sm font-medium">+91 8079048424</p>
-          <a href="mailto:friendsconsultinghelp@gmail.com"
-            class="text-cyan-300 underline text-sm mt-2 inline-block hover:text-white">
-            ✉️ Send Email
-          </a>
-        </div>
-      </div>
-    </div>
+  <div class="text-center mt-10">
+    <a href="../index.html" class="text-cyan-300 underline hover:text-white">← Back to Home</a>
   </div>
-
 
   <footer class="mt-12 text-center text-sm text-gray-300 border-t border-gray-600 pt-6 pb-4 space-y-2">
     <p>&copy; 2025 Friends Consulting. All rights reserved.</p>
@@ -189,35 +164,40 @@
       📞
     </button>
 
+    <!-- Hidden Contact Box -->
+    <div id="contactBox"
+      class="mt-3 opacity-0 scale-95 pointer-events-none transition-all duration-500 transform w-72 max-w-[90vw]">
+      <div class="bg-[#0d3b47] text-center rounded-xl px-4 py-3 shadow-lg text-white hover:shadow-cyan-400/50">
+        <h3 class="text-base font-semibold text-cyan-300">📞 Contact Us</h3>
+        <p class="text-sm font-medium">+91 8420566682</p>
+        <p class="text-sm font-medium">+91 8079048424</p>
+        <a href="mailto:friendsconsultinghelp@gmail.com"
+          class="text-cyan-300 underline text-sm mt-2 inline-block hover:text-white">
+          ✉️ Send Email
+        </a>
+      </div>
+    </div>
+  </div>
 
- <script>
-  const box = document.getElementById('contactBox');
-  const btn = document.getElementById('contactButton');
+  <!-- JS Script -->
+  <script>
+    const box = document.getElementById('contactBox');
+    const btn = document.getElementById('contactButton');
 
-  function toggleContact() {
-    const isOpen = box.classList.contains('opacity-100');
+    function toggleContact() {
+      const isOpen = box.classList.contains('opacity-100');
 
-    if (isOpen) {
-      box.classList.remove(
-        'opacity-100', 'scale-100', 'pointer-events-auto', 'translate-x-4'
-      );
-      box.classList.add(
-        'opacity-0', 'scale-95', 'pointer-events-none', 'translate-x-20'
-      );
-      btn.classList.remove('shadow-cyan-400/50');
-    } else {
-      box.classList.remove(
-        'opacity-0', 'scale-95', 'pointer-events-none', 'translate-x-20'
-      );
-      box.classList.add(
-        'opacity-100', 'scale-100', 'pointer-events-auto', 'translate-x-4'
-      );
-      btn.classList.add('shadow-cyan-400/50');
+      if (isOpen) {
+        box.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
+        box.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+        btn.classList.remove('shadow-cyan-400/50');
+      } else {
+        box.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+        box.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
+        btn.classList.add('shadow-cyan-400/50');
+      }
     }
-  }
-</script>
-
-
+  </script>
 
 </body>
 
