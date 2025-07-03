@@ -14,7 +14,7 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form id="signup-form">
                 <h1>Create Account</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
@@ -26,11 +26,12 @@
                 <input type="text" placeholder="Name">
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Password">
-                <button>Sign Up</button>
+                <p id="signup-warning" class="hidden text-red-500 text-sm mt-2">⚠️ Please enter valid details!</p>
+                <button id="register">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form id="signin-form"> 
                 <h1>Sign In</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
@@ -42,7 +43,8 @@
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Password">
                 <a href="#">Forgot Your Password?</a>
-                <button>Sign In</button>
+                <p id="signin-warning" class="hidden text-red-500 text-sm mt-2">⚠️ Please enter valid details!</p>
+                <button id="login">Sign In</button>
             </form>
         </div>
         <div class="toggle-container">
@@ -50,12 +52,12 @@
                 <div class="toggle-panel toggle-left">
                     <h1>Welcome Back!</h1>
                     <p>Enter your personal details to use all of site features</p>
-                    <button class="hidden" id="login">Sign In</button>
+                    <button id="toggle-login">Sign In</button>
                 </div>
                 <div class="toggle-panel toggle-right">
                     <h1>Hello, Friend!</h1>
                     <p>Register with your personal details to use all of site features</p>
-                    <button class="hidden" id="register">Sign Up</button>
+                    <button id="toggle-register">Sign Up</button>
                 </div>
             </div>
         </div>
