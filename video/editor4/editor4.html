@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Editing Plans | Friends Consulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #155e95;
+    }
+    .plan-container {
+      position: relative;
+      width: 768px;
+      max-width: 100%;
+      min-height: 480px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+    }
+    .plan-container .panel {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      transition: all 0.6s ease-in-out;
+      padding: 2rem;
+    }
+    .basic-panel {
+      background: linear-gradient(to right, #00bcd4, #0d9ca5);
+      z-index: 2;
+    }
+    .silver-panel, .premium-panel {
+      opacity: 0;
+      z-index: 1;
+    }
+    .silver-panel {
+      background: linear-gradient(to right, #13363e, #6b6e6f);
+    }
+    .premium-panel {
+      background: linear-gradient(to right, #f6c96e, #d4a72b);
+    }
+    .plan-container.active-silver .basic-panel,
+    .plan-container.active-premium .basic-panel {
+      transform: translateX(-100%);
+      opacity: 0;
+      z-index: 1;
+    }
+    .plan-container.active-silver .silver-panel {
+      transform: translateX(0);
+      opacity: 1;
+      z-index: 2;
+    }
+    .plan-container.active-premium .silver-panel {
+      transform: translateX(-100%);
+      opacity: 0;
+      z-index: 1;
+    }
+    .plan-container.active-premium .premium-panel {
+      transform: translateX(0);
+      opacity: 1;
+      z-index: 2;
+    }
+    .toggle-tabs {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .toggle-tabs button {
+      margin: 0 1rem;
+      padding: 0.4rem 1rem;
+      background-color: #ffffff22;
+      border: 1px solid #ffffff55;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .toggle-tabs button:hover {
+      background-color: #ffffff55;
+    }
+    .sample-btn {
+      display: inline-block;
+      margin: 0.25rem 0.4rem;
+      padding: 0.4rem 1rem;
+      background-color: rgba(0, 0, 0, 0.25);
+      color: #ffffff;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .sample-btn:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="text-white font-sans min-h-screen py-10 px-4">
+  <h1 class="text-3xl font-bold text-center text-cyan-300 mb-8">🎬 <i>Choose Your Video Editing Plan</i></h1>
+
+  <div class="toggle-tabs">
+    <button onclick="showBasic()">Basic ₹299</button>
+    <button onclick="showSilver()">Silver ₹499</button>
+    <button onclick="showPremium()">Premium ₹799</button>
+  </div>
+
+  <div class="plan-container" id="planContainer">
+    <!-- Basic Plan -->
+    <div class="panel basic-panel text-center text-white">
+      <h2 class="text-2xl font-bold mb-2">Basic Plan</h2>
+      <p class="mb-4">@ ₹299 | Full HD (up to 1080p)</p>
+      <ul class="mb-4">
+        <li>✔ Simple Edits</li>
+        <li>✔ Basic Color Correction</li>
+        <li>✔ Basic Transitions</li>
+      </ul>
+      <a href="https://drive.google.com/file/d/1zjsxxdmeryK-pddc4xVFjhLzk7n_zcrt/view?usp=sharing" target="_blank" class="sample-btn">
+        🎬 Watch Sample
+      </a>
+    </div>
+
+    <!-- Silver Plan -->
+    <div class="panel silver-panel text-center text-white">
+      <h2 class="text-2xl font-bold mb-2">Silver Plan</h2>
+      <p class="mb-4">@ ₹499 | Full HD (up to 1080p)</p>
+      <ul class="mb-4">
+        <li>✔ Cinematic Edits</li>
+        <li>✔ Smooth Transitions</li>
+        <li>✔ Color Correction</li>
+        <li>✔ Minimal Motion Graphics</li>
+      </ul>
+      <a href="https://drive.google.com/file/d/1rxtXpN6LYuUQPzG5TFwQPbas6vfbrOvd/view?usp=sharing" target="_blank" class="sample-btn">
+        🎬 Watch Sample
+      </a>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="panel premium-panel text-center text-white">
+      <h2 class="text-2xl font-bold mb-2">Premium Plan</h2>
+      <p class="mb-4">@ ₹799 | 4K–8K Ultra HD</p>
+      <ul class="mb-4">
+        <li>✔ Professional Edits</li>
+        <li>✔ Cinematic Effects</li>
+        <li>✔ Color Grading</li>
+        <li>✔ Motion Graphics & Sound Design</li>
+      </ul>
+      <a href="https://drive.google.com/file/d/1KATGctI3mWk7nORnv0N_YgLc9TeNqwuZ/view?usp=sharing" target="_blank" class="sample-btn">
+        🌟 Watch Premium Sample
+      </a>
+    </div>
+  </div>
+
+  <div class="text-center mt-10">
+    <a href="../video.html" class="text-cyan-300 underline hover:text-white">← Back to Editors</a>
+  </div>
+
+  <script>
+    const container = document.getElementById("planContainer");
+
+    function showBasic() {
+      container.classList.remove("active-silver", "active-premium");
+    }
+    function showSilver() {
+      container.classList.add("active-silver");
+      container.classList.remove("active-premium");
+    }
+    function showPremium() {
+      container.classList.add("active-premium");
+      container.classList.remove("active-silver");
+    }
+  </script>
+
+  <footer class="mt-12 text-center text-sm text-gray-300 border-t border-gray-600 pt-6 pb-4 space-y-2">
+    <p>&copy; 2025 Friends Consulting. All rights reserved.</p>
+    <p class="text-xs text-red-300 max-w-xl mx-auto px-4">
+      ⚠ All video samples showcased on this page are the intellectual property of the respective editor. Unauthorized use, reproduction, or distribution of any content without explicit permission is strictly prohibited.
+    </p>
+  </footer>
+</body>
+</html>
