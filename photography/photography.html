@@ -2,50 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Career Counselling - Friends Consulting</title>
-    <link rel="icon" type="image/png" href="../assets/logo.jpg" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            background-color: #155e95;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography - Friends Consulting</title>
+  <link rel="icon" type="image/png" href="../assets/logo.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #155e95;
+    }
 
-        /* Fade-in animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
 
-        .fade-in-start {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Contact box styles */
-        .contact-box {
-            position: fixed;
-            bottom: 1.5rem;
-            right: 1.5rem;
-            z-index: 50;
-        }
-    </style>
+    .fade-in-start {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 
 <body class="text-white font-sans min-h-screen py-10 px-4 sm:px-6 md:px-10 relative">
-    <div id="contactToggle" class="fixed bottom-0 left-0  mx-auto w-fit">
-    <!-- Toggle Button -->
+
+  <!-- Contact Button & Box -->
+  <div class="z-50">
+    <!-- 📞 Call Button -->
     <button onclick="toggleContact()" id="contactButton"
-      class="bg-cyan-600 hover:bg-cyan-700 text-white text-2xl p-4 rounded-full shadow-lg hover:shadow-cyan-400/50 transition-all duration-300">
+      class="bg-cyan-600 hover:bg-cyan-700 text-white text-2xl p-4 rounded-full shadow-lg fixed bottom-6 right-6 z-50 transition duration-300 ease-in-out hover:shadow-cyan-400/50">
       📞
     </button>
 
-    <!-- Hidden Contact Box -->
+    <!-- Contact Info Box -->
     <div id="contactBox"
-      class="mt-3 opacity-0 scale-95 pointer-events-none transition-all duration-500 transform w-72 max-w-[90vw]">
-      <div class="bg-[#0d3b47] text-center rounded-xl px-4 py-3 shadow-lg text-white hover:shadow-cyan-400/50">
+      class="opacity-0 scale-95 pointer-events-none transition-all duration-300 ease-in-out transform w-72 max-w-[90vw] fixed bottom-24 right-6 z-50">
+      <div class="bg-[#0d3b47] text-center rounded-xl px-4 py-3 shadow-lg text-white">
         <h3 class="text-base font-semibold text-cyan-300">📞 Contact Us</h3>
         <p class="text-sm font-medium">+91 8420566682</p>
         <p class="text-sm font-medium">+91 8079048424</p>
@@ -57,48 +50,66 @@
     </div>
   </div>
 
-    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 text-cyan-300">
-        📸 Our Photographer
-    </h1>
+  <!-- Header -->
+  <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 text-cyan-300">
+    📸 Our Photographers
+  </h1>
 
-    <!-- Photographer Card Section -->
-    <div class="max-w-2xl mx-auto">
-        <a href="photographer1/photographer1.html">
-            <div id="photoCard"
-                class="fade-in bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-400/50 hover:scale-105 transform text-center">
+  <!-- Photographer Cards Section -->
+  <div class="max-w-2xl mx-auto space-y-10">
 
-                <!-- Circular Profile Image -->
-                <div class="flex items-center justify-center gap-4 mb-4">
-                    <img src="photographer1/krishno-pokhho.png" alt="Krishno Pokhho"
-                        class="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-cyan-400 group-hover:scale-110 transition-transform duration-500" />
-                </div>
-
-                <!-- Name -->
-                <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">Krishno - Pokhho</h2>
-
-                <!-- Description -->
-                <p class="text-gray-200 text-sm sm:text-base leading-relaxed mb-4">
-                    Krishno - Pokhho is a band photography collective that captures the raw energy, emotion, and soul of
-                    live
-                    music.
-                    From electrifying stage moments to behind-the-scenes stills, we freeze the spirit of bands in
-                    motion. Whether
-                    it's
-                    a live gig, studio session, or promo shoot — we turn sound into unforgettable visuals.
-                </p>
-            </div>
-        </a>
+    <!-- Photographer 1 -->
+    <div>
+      <a href="photographer1/photographer1.html">
+        <div
+          class="fade-in bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-400/50 hover:scale-105 transform text-center">
+          <div class="flex items-center justify-center gap-4 mb-4">
+            <img src="photographer1/krishno-pokhho.png" alt="Krishno Pokhho"
+              class="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-cyan-400 transition-transform duration-500" />
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">Krishno - Pokhho</h2>
+          <p class="text-gray-200 text-sm sm:text-base leading-relaxed mb-4">
+            Krishno - Pokhho is a band photography collective that captures the raw energy, emotion, and soul of live
+            music. From electrifying stage moments to behind-the-scenes stills, we freeze the spirit of bands in motion.
+            Whether it's a live gig, studio session, or promo shoot — we turn sound into unforgettable visuals.
+          </p>
+        </div>
+      </a>
     </div>
 
-    <!-- Script to trigger fade-in on load -->
-    <script>
-        window.addEventListener("DOMContentLoaded", () => {
-            const card = document.getElementById("photoCard");
-            setTimeout(() => {
-                card.classList.add("fade-in-start");
-            }, 100);
-        });
-        const box = document.getElementById('contactBox');
+    <!-- Photographer 2 -->
+    <div>
+      <a href="photographer2/photographer2.html">
+        <div
+          class="fade-in bg-[#0d3b47] p-6 sm:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-400/50 hover:scale-105 transform text-center">
+          <div class="flex items-center justify-center gap-4 mb-4">
+            <img src="photographer2/logo.jpg" alt="Arjo's Photography"
+              class="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-cyan-400 transition-transform duration-500" />
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">Arjo's Photography</h2>
+          <p class="text-gray-200 text-sm sm:text-base leading-relaxed mb-4">
+          A passionate nature and street photographer who captures raw urban moments and serene natural beauty — turning everyday scenes into timeless visual stories.  
+          </p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Fade-in animation
+    window.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".fade-in");
+      cards.forEach((card, i) => {
+        setTimeout(() => {
+          card.classList.add("fade-in-start");
+        }, 200 * i);
+      });
+    });
+
+    // Contact toggle
+    const box = document.getElementById('contactBox');
     const btn = document.getElementById('contactButton');
 
     function toggleContact() {
@@ -114,7 +125,7 @@
         btn.classList.add('shadow-cyan-400/50');
       }
     }
-    </script>
+  </script>
 </body>
 
 </html>
