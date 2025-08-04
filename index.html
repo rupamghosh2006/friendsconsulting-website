@@ -20,6 +20,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="icon" type="image/png" href="assets/logo.jpg" />
+  <link rel="stylesheet" href="popup.css">
 
   <style>
     html {
@@ -284,6 +285,36 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+  </script>
+
+  <!-- Video Popup -->
+  <div id="videoPopup">
+    <div class="popup-content">
+      
+      <!-- Video Box -->
+      <div class="video-box">
+        <button class="close-btn" onclick="closePopup()">X</button>
+        <video autoplay loop muted>
+          <source src="Gaming popup video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Register button OUTSIDE the video -->
+      <button class="register-btn" onclick="window.location.href='register.html'">
+        Register Now
+      </button>
+    </div>
+  </div>
+  <script>
+    // Show popup automatically on page load
+    window.onload = function() {
+      document.getElementById('videoPopup').style.display = 'flex';
+    };
+
+    function closePopup() {
+      document.getElementById('videoPopup').style.display = 'none';
+    }
   </script>
 </body>
 
