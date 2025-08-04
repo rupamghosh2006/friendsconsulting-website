@@ -20,7 +20,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="icon" type="image/png" href="assets/logo.jpg" />
-  <link rel="stylesheet" href="popup.css">
+  
 
   <style>
     html {
@@ -106,6 +106,43 @@
       </nav>
     </div>
   </header>
+
+  <!-- Video Popup -->
+<div id="videoPopup"
+  class="hidden fixed inset-0 bg-black/80 flex justify-center items-center z-[9999]"
+>
+  <div class="flex flex-col items-center w-[420px]">  
+    <!-- Video Box -->
+    <div class="relative w-full h-[600px] overflow-hidden rounded-t-[10px] bg-black">
+      <button class="absolute top-2 right-2 bg-red-600 text-white border-none px-3 py-1.5 text-sm font-bold rounded z-10 hover:bg-red-700 transition"
+        onclick="closePopup()"
+        aria-label="Close"
+      >X</button>
+      <video autoplay loop muted class="w-full h-full object-fill block rounded-t-[10px]">
+        <source src="Gaming popup video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- Register button OUTSIDE the video -->
+    <button class="w-full py-3 bg-green-600 text-white font-semibold text-lg border-none rounded-b-[10px] hover:bg-green-800 transition"
+      onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSeyKi4iVc-aR-_i6pGNFHEElC4wzEzNhRMJbPaxpio0auAAkA/viewform?usp=header'"
+    >
+      Register Now
+    </button>
+  </div>
+</div>
+
+<script>
+    // Show popup automatically on page load
+    window.onload = function() {
+      document.getElementById('videoPopup').style.display = 'flex';
+    };
+
+    function closePopup() {
+      document.getElementById('videoPopup').style.display = 'none';
+    }
+  </script>
+
 
   <!-- Hero Section -->
 
@@ -287,35 +324,7 @@
     })
   </script>
 
-  <!-- Video Popup -->
-  <div id="videoPopup">
-    <div class="popup-content">
-      
-      <!-- Video Box -->
-      <div class="video-box">
-        <button class="close-btn" onclick="closePopup()">X</button>
-        <video autoplay loop muted>
-          <source src="Gaming popup video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <!-- Register button OUTSIDE the video -->
-      <button class="register-btn" onclick="window.location.href='register.html'">
-        Register Now
-      </button>
-    </div>
-  </div>
-  <script>
-    // Show popup automatically on page load
-    window.onload = function() {
-      document.getElementById('videoPopup').style.display = 'flex';
-    };
-
-    function closePopup() {
-      document.getElementById('videoPopup').style.display = 'none';
-    }
-  </script>
+  
 </body>
 
 </html>
