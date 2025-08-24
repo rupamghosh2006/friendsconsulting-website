@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="UTF-8" />
 
-    <!-- Open Graph -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Friends Consulting – Event Services, video editing, photography, Web, digital marketing and more." />
   <meta property="og:description" content="Make your events unforgettable with Friends Consulting:  event management, photography, video editing, graphic designing, digital marketing, web, and more." />
   <meta property="og:image" content="https://friendsconsulting.in/assets/logo.jpg" />
@@ -70,12 +70,9 @@
     }
 
     @keyframes blink {
-
-      0%,
-      100% {
+      0%, 100% {
         border-color: transparent;
       }
-
       50% {
         border-color: black;
       }
@@ -107,45 +104,42 @@
     </div>
   </header>
 
-  <!-- Video Popup -->
-<div id="videoPopup"
-  class="hidden fixed inset-0 bg-black/80 flex justify-center items-center z-[9999]"
->
-  <div class="flex flex-col items-center w-[420px]">  
-    <!-- Video Box -->
-    <div class="relative w-full h-[600px] overflow-hidden rounded-t-[10px] bg-black">
-      <button class="absolute top-2 right-2 bg-red-600 text-white border-none px-3 py-1.5 text-sm font-bold rounded z-10 hover:bg-red-700 transition"
-        onclick="closePopup()"
-        aria-label="Close"
-      >X</button>
-      <video autoplay loop muted class="w-full h-full object-fill block rounded-t-[10px]">
-        <source src="https://res.cloudinary.com/djdgzhndc/video/upload/v1754478824/Gaming_popup_video_nhuxxl.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <!-- Register button OUTSIDE the video -->
-    <button class="w-full py-3 bg-green-600 text-white font-semibold text-lg border-none rounded-b-[10px] hover:bg-green-800 transition"
-      onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSeyKi4iVc-aR-_i6pGNFHEElC4wzEzNhRMJbPaxpio0auAAkA/viewform?usp=header'"
-    >
-      Register Now
-    </button>
-  </div>
-</div>
+  <!-- Image Popup -->
+  <div id="imagePopup"
+    class="hidden fixed inset-0 bg-black/80 flex justify-center items-center z-[9999]">
+    
+    <div class="flex flex-col items-center w-[420px]">
+      <!-- Image Box -->
+      <div class="relative w-full h-[600px] overflow-hidden rounded-t-[10px] bg-black">
+        <button class="absolute top-2 right-2 bg-red-600 text-white border-none px-3 py-1.5 text-sm font-bold rounded z-10 hover:bg-red-700 transition"
+          onclick="closeImagePopup()"
+          aria-label="Close">X</button>
+        
+        <img src="assets/Pritam_profile_pic.jpg" 
+             alt="Popup Image"
+             class="w-full h-full object-cover rounded-t-[10px]" />
+      </div>
 
-<script>
+      <!-- Register button OUTSIDE the image -->
+      <button class="w-full py-3 bg-green-600 text-white font-semibold text-lg border-none rounded-b-[10px] hover:bg-green-800 transition"
+        onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfpuIUl4Zwq0C8JPReVF53NUpvwj4NPMy9wlq1TVHTsJpr_IA/viewform?usp=header_link';">
+        Register Now
+      </button>
+    </div>
+  </div>
+
+  <script>
     // Show popup automatically on page load
     window.onload = function() {
-      document.getElementById('videoPopup').style.display = 'flex';
-    };
+      document.getElementById("imagePopup").classList.remove("hidden");
+    }
 
-    function closePopup() {
-      document.getElementById('videoPopup').style.display = 'none';
+    function closeImagePopup() {
+      document.getElementById("imagePopup").classList.add("hidden");
     }
   </script>
 
-
   <!-- Hero Section -->
-
   <section class="text-center py-20 bg-gradient-to-r from-[#9ff5cf] to-[#00cfff] text-black">
     <div class="inline-block">
       <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2">
@@ -155,91 +149,86 @@
         to friends Consulting👋
       </h2>
     </div>
-
-    <div class="mt-6">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyKi4iVc-aR-_i6pGNFHEElC4wzEzNhRMJbPaxpio0auAAkA/viewform?usp=header" target="_blank"
-     class="inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-cyan-600 transition font-semibold">
-    🎮 Register to Game Event – Nsecian Club Gaming Arcade
-  </a>
-</div>
-
   </section>
 
   <!-- Services -->
   <section id="services" class="py-16 bg-[#062f38] text-white">
-  <div class="max-w-6xl mx-auto px-4">
-    <h3 class="text-3xl font-bold mb-10 text-center">Services We Offer</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-10 text-center">Services We Offer</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <a href="events/events.html"
-        class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-        <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-          📅 Events Management
-        </h4>
-        <p>Complete planning & execution of your events.</p>
-      </a>
+        <a href="events/events.html"
+          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
+            📅 Events Management
+          </h4>
+          <p>Complete planning & execution of your events.</p>
+        </a>
 
-      <a href="photography/photography.html"
-        class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-        <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-          📸 Photography
-        </h4>
-        <p>Capturing memories with creativity and quality.</p>
-      </a>
+        <a href="photography/photography.html"
+          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
+            📸 Photography
+          </h4>
+          <p>Capturing memories with creativity and quality.</p>
+        </a>
 
-      <a href="video/video.html"
-        class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-        <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-          📽️ Video Editing & Graphic Designing
-        </h4>
-        <p>Professional Video Editors & Graphic Designers at your service</p>
-      </a>
-      
-      <a href="marketing/marketing.html"
-        class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-        <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-          📢 PR and Digital Marketing
-        </h4>
-        <p>Boost your brand with smart PR and targeted digital campaigns.</p>
-      </a>
+        <a href="video/video.html"
+          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
+            📽️ Video Editing & Graphic Designing
+          </h4>
+          <p>Professional Video Editors & Graphic Designers at your service</p>
+        </a>
+        
+        <a href="marketing/marketing.html"
+          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
+            📢 PR and Digital Marketing
+          </h4>
+          <p>Boost your brand with smart PR and targeted digital campaigns.</p>
+        </a>
 
-      <a href="website/website.html"
-        class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-        <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-          💻 Web Design & Creation
-        </h4>
-        <p>Stylish and responsive websites built to impress.</p>
-      </a>
+        <a href="website/website.html"
+          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
+            💻 Web Design & Creation
+          </h4>
+          <p>Stylish and responsive websites built to impress.</p>
+        </a>
 
-      <a href="career.html"
-        class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-        <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-          🎓 Career Counselling
-        </h4>
-        <p>Guidance and mentorship for career paths.</p>
-      </a>
+        <a href="ai.html"
+          class="relative block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+        
+          <!-- New Mark -->
+          <span
+            class="absolute top-2 right-2 bg-cyan-400 text-[#0d3b47] text-xs font-bold px-2 py-1 rounded-full shadow">
+            NEW
+          </span>
 
-
+          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
+            🤖 AI and Automations 
+          </h4>
+          <p>Join us a AI Engineer.</p>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- About -->
   <section id="about" class="py-16 bg-[#06333d] text-white">
-  <div class="max-w-4xl mx-auto text-center px-4">
-    <h3 class="text-4xl font-bold mb-6 inline-block text-cyan-400 typing-text">
-      About Us
-    </h3>
-    <p class="text-gray-200 text-lg leading-relaxed hover:text-cyan-200 transition duration-300">
-      <span class="font-semibold text-cyan-400">Friends Consulting</span> is your all-in-one destination for creating unforgettable experiences. From mesmerizing events—sound, light, and food—to capturing timeless moments with our photography services, we bring creativity and precision to every event.<br /><br />
-      We also offer modern <span class="text-cyan-300">web design and creation</span> solutions, along with <span class="text-cyan-300">PR and digital marketing management</span> for the overall social management of the client and others.<br /><br />
-      So, if you’re planning a grand celebration or seeking <span class="text-cyan-300">career counseling</span>, our expert team ensures a seamless, professional experience from start to finish.<br /><br />
-      At Friends Consulting, we don’t just plan events—we craft memories that last for a lifetime.
-    </p>
-  </div>
-</section>
-
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h3 class="text-4xl font-bold mb-6 inline-block text-cyan-400 typing-text">
+        About Us
+      </h3>
+      <p class="text-gray-200 text-lg leading-relaxed hover:text-cyan-200 transition duration-300">
+        <span class="font-semibold text-cyan-400">Friends Consulting</span> is your all-in-one destination for creating unforgettable experiences. From mesmerizing events—sound, light, and food—to capturing timeless moments with our photography services, we bring creativity and precision to every event.<br /><br />
+        We also offer modern <span class="text-cyan-300">web design and creation</span> solutions, along with <span class="text-cyan-300">PR and digital marketing management</span> for the overall social management of the client and others.<br /><br />
+        So, if you’re planning a grand celebration or seeking <span class="text-cyan-300">career counseling</span>, our expert team ensures a seamless, professional experience from start to finish.<br /><br />
+        At Friends Consulting, we don’t just plan events—we craft memories that last for a lifetime.
+      </p>
+    </div>
+  </section>
 
   <!-- Contact -->
   <section id="contact" class="py-12 bg-[#06333d]">
@@ -276,8 +265,8 @@
             class="inline-block mt-6 px-5 py-2 bg-cyan-600 text-white rounded-full hover:bg-[black] transition">
             Business Card
           </a>
-
         </div>
+
         <div class="md:w-1/2">
           <form name="submit-to-google-sheet">
             <input type="text" name="Name" placeholder="Your Name" required
@@ -323,8 +312,5 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
-
-  
 </body>
-
 </html>
