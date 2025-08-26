@@ -15,6 +15,7 @@
   <meta property="og:type" content="website" />
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -53,8 +54,123 @@
     .nav-link:hover::after {
       width: 100%;
     }
-  </style>
-  <style>
+
+    /* Enhanced Hero Section Styles */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .animated-gradient {
+      background: linear-gradient(-45deg, #00d4ff, #9ff5cf, #00cfff, #7dd3fc, #22d3ee);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+    }
+    
+    /* Typing animation for hero */
+    @keyframes heroTyping {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    
+    @keyframes heroBlink {
+      0%, 50% { border-color: transparent; }
+      51%, 100% { border-color: #000; }
+    }
+    
+    .hero-typing-text {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #000;
+      animation: heroTyping 3s steps(20) 1s both, heroBlink 1s step-end infinite;
+      display: inline-block;
+    }
+    
+    /* Floating animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(-10px) rotate(1deg); }
+      66% { transform: translateY(5px) rotate(-1deg); }
+    }
+    
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    /* Pulse animation for badge */
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 5px rgba(34, 211, 238, 0.5); }
+      50% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.8), 0 0 30px rgba(34, 211, 238, 0.4); }
+    }
+    
+    .pulse-glow {
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    /* Glass morphism effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Hover effects */
+    .hover-scale {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .hover-scale:hover {
+      transform: scale(1.05) translateY(-5px);
+    }
+    
+    /* Button glow effect */
+    .glow-button {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .glow-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: left 0.5s;
+    }
+    
+    .glow-button:hover::before {
+      left: 100%;
+    }
+    
+    /* Particle effect */
+    .particle {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    
+    @keyframes particleFloat {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Legacy typing animation for about section */
     @keyframes typing {
       0% {
         width: 0;
@@ -85,21 +201,69 @@
       animation: typing 4s steps(30, end) infinite,
         blink 0.7s step-end infinite;
     }
+
+    /* Icon animations */
+    @keyframes iconFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .icon-float {
+      animation: iconFloat 2s ease-in-out infinite;
+    }
+
+    .service-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .service-icon {
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover .service-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
   </style>
 </head>
 
 <body class="text-white font-sans">
   <!-- Header/Navbar -->
-  <header id="navbar" class="sticky top-0 z-50 bg-white/60 backdrop-blur-md transition-all duration-300 shadow">
-    <div class="max-w-2xl mx-auto flex justify-between items-center px-1.5">
-      <a href="#">
-        <img src="assets/logo.png" alt="Logo" class="h-16 w-auto" />
+  <header id="navbar" class="sticky top-0 z-50 bg-white/80 backdrop-blur-md transition-all duration-300 shadow-lg">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
+      <a href="#" class="flex items-center space-x-2">
+        <img src="assets/logo.png" alt="Logo" class="h-12 w-auto" />
+        <span class="text-xl font-bold text-gray-800">Friends Consulting</span>
       </a>
-      <nav class="space-x-4">
-        <a href="user_sign_up/sign_up.html" class="nav-link text-[#06333d]">Sign Up</a>
-        <a href="#services" class="nav-link text-[#06333d]">Services</a>
-        <a href="#about" class="nav-link text-[#06333d]">About</a>
-        <a href="#contact" class="nav-link text-[#06333d]">Contact</a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#services" class="nav-link text-gray-700 hover:text-cyan-600 font-medium flex items-center space-x-2">
+          <i data-lucide="briefcase" class="w-4 h-4"></i>
+          <span>Services</span>
+        </a>
+        <a href="#about" class="nav-link text-gray-700 hover:text-cyan-600 font-medium flex items-center space-x-2">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>About</span>
+        </a>
+        <a href="#contact" class="nav-link text-gray-700 hover:text-cyan-600 font-medium flex items-center space-x-2">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          <span>Contact</span>
+        </a>
+      </nav>
+      <!-- Mobile menu button -->
+      <button class="md:hidden text-gray-700 hover:text-cyan-600" onclick="toggleMobileMenu()">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white/90 backdrop-blur-md border-t border-gray-200">
+      <nav class="px-6 py-4 space-y-3">
+        <a href="#services" class="block text-gray-700 hover:text-cyan-600 font-medium">Services</a>
+        <a href="#about" class="block text-gray-700 hover:text-cyan-600 font-medium">About</a>
+        <a href="#contact" class="block text-gray-700 hover:text-cyan-600 font-medium">Contact</a>
       </nav>
     </div>
   </header>
@@ -108,209 +272,582 @@
   <div id="imagePopup"
     class="hidden fixed inset-0 bg-black/80 flex justify-center items-center z-[9999]">
     
-    <div class="flex flex-col items-center w-[420px]">
+    <div class="flex flex-col items-center w-[420px] m-4">
       <!-- Image Box -->
-      <div class="relative w-full h-[600px] overflow-hidden rounded-t-[10px] bg-black">
-        <button class="absolute top-2 right-2 bg-red-600 text-white border-none px-3 py-1.5 text-sm font-bold rounded z-10 hover:bg-red-700 transition"
+      <div class="relative w-full overflow-hidden rounded-t-[10px] bg-black">
+        <button class="absolute top-2 right-2 bg-red-600 text-white border-none px-3 py-1.5 text-sm font-bold rounded z-10 hover:bg-red-700 transition flex items-center space-x-1"
           onclick="closeImagePopup()"
-          aria-label="Close">X</button>
+          aria-label="Close">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
         
-        <img src="assets/Pritam_profile_pic.jpg" 
+        <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1756188663/WhatsApp_Image_2025-08-23_at_10.32.47_fe809d0e_pe8pmp.jpg" 
              alt="Popup Image"
-             class="w-full h-full object-cover rounded-t-[10px]" />
+             class="w-full h-64 object-cover rounded-t-[10px]" />
       </div>
 
       <!-- Register button OUTSIDE the image -->
-      <button class="w-full py-3 bg-green-600 text-white font-semibold text-lg border-none rounded-b-[10px] hover:bg-green-800 transition"
+      <button class="w-full py-3 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold text-lg border-none rounded-b-[10px] hover:from-green-700 hover:to-green-800 transition flex items-center justify-center space-x-2"
         onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfpuIUl4Zwq0C8JPReVF53NUpvwj4NPMy9wlq1TVHTsJpr_IA/viewform?usp=header_link';">
-        Register Now
+        <i data-lucide="user-plus" class="w-5 h-5"></i>
+        <span>Register Now</span>
       </button>
     </div>
   </div>
 
-  <script>
-    // Show popup automatically on page load
-    window.onload = function() {
-      document.getElementById("imagePopup").classList.remove("hidden");
-    }
-
-    function closeImagePopup() {
-      document.getElementById("imagePopup").classList.add("hidden");
-    }
-  </script>
-
-  <!-- Hero Section -->
-  <section class="text-center py-20 bg-gradient-to-r from-[#9ff5cf] to-[#00cfff] text-black">
-    <div class="inline-block">
-      <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2">
-        Welcome
-      </h2>
-      <h2 class="typing text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2">
-        to friends Consulting👋
-      </h2>
+  <!-- Enhanced Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center animated-gradient overflow-hidden">
+    <!-- Particle Background -->
+    <div id="particles" class="absolute inset-0 pointer-events-none"></div>
+    
+    <!-- Main Content -->
+    <div class="relative z-10 text-center px-6 max-w-6xl mx-auto">
+      <!-- Welcome Text -->
+      <div class="mb-8">
+        <div class="flex items-center justify-center space-x-3 mb-4">
+          <i data-lucide="sparkles" class="w-8 h-8 text-gray-700 icon-float"></i>
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900">
+            Welcome to
+          </h1>
+          <i data-lucide="sparkles" class="w-8 h-8 text-gray-700 icon-float"></i>
+        </div>
+        <div class="relative inline-block">
+          <h1 class="hero-typing-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 flex items-center justify-center space-x-4">
+            <span>Friends Consulting</span>
+            <i data-lucide="handshake" class="w-12 h-12 text-cyan-600"></i>
+          </h1>
+        </div>
+      </div>
+      
+      <!-- Subtitle -->
+      <p class="text-lg md:text-xl lg:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+        Revolutionizing the future with cutting-edge AI solutions and innovative consulting services
+      </p>
+      
+      <!-- CTA Card -->
+      <div class="floating hover-scale">
+        <div class="relative glass rounded-3xl p-8 md:p-12 shadow-2xl max-w-2xl mx-auto">
+          <!-- NEW Badge -->
+          <span class="absolute -top-3 -right-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg pulse-glow flex items-center space-x-1">
+            <i data-lucide="star" class="w-4 h-4"></i>
+            <span>NEW</span>
+          </span>
+          
+          <!-- Main CTA Content -->
+          <div class="space-y-6">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+              <i data-lucide="rocket" class="w-8 h-8 text-gray-700"></i>
+              <h3 class="text-xl md:text-2xl font-semibold text-gray-900">
+                Join the AI Revolution
+              </h3>
+            </div>
+            <p class="text-gray-700 text-sm md:text-base mb-6">
+              Be part of the next generation of AI-powered solutions. Transform your business with our expert consulting.
+            </p>
+            
+            <!-- CTA Button -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpuIUl4Zwq0C8JPReVF53NUpvwj4NPMy9wlq1TVHTsJpr_IA/viewform?usp=header_link" 
+               target="_blank"
+               class="glow-button inline-flex items-center gap-3 bg-gradient-to-r from-gray-900 to-gray-700 text-white px-8 py-4 rounded-full font-semibold text-lg tracking-wide shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <i data-lucide="bot" class="w-6 h-6 group-hover:scale-110 transition-transform duration-300"></i>
+              <span>Get Started Today</span>
+              <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"></i>
+            </a>
+          </div>
+          
+          <!-- Features List -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-white/20">
+            <div class="flex items-center gap-3 text-gray-800">
+              <div class="w-10 h-10 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full flex items-center justify-center shadow-lg">
+                <i data-lucide="zap" class="w-5 h-5 text-white"></i>
+              </div>
+              <span class="font-medium">Fast Setup</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-800">
+              <div class="w-10 h-10 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full flex items-center justify-center shadow-lg">
+                <i data-lucide="headphones" class="w-5 h-5 text-white"></i>
+              </div>
+              <span class="font-medium">Expert Support</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-800">
+              <div class="w-10 h-10 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full flex items-center justify-center shadow-lg">
+                <i data-lucide="lightbulb" class="w-5 h-5 text-white"></i>
+              </div>
+              <span class="font-medium">Innovation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <i data-lucide="chevron-down" class="w-8 h-8 text-gray-700"></i>
+      </div>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-16 bg-[#062f38] text-white">
+  <section id="services" class="py-20 bg-[#062f38] text-white">
     <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-bold mb-10 text-center">Services We Offer</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="text-center mb-16">
+        <div class="flex items-center justify-center space-x-3 mb-4">
+          <i data-lucide="briefcase" class="w-8 h-8 text-cyan-400"></i>
+          <h3 class="text-4xl font-bold text-cyan-400">Services We Offer</h3>
+          <i data-lucide="briefcase" class="w-8 h-8 text-cyan-400"></i>
+        </div>
+        <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+          Comprehensive solutions to elevate your business and create unforgettable experiences
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <a href="events/events.html"
-          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-            📅 Events Management
-          </h4>
-          <p>Complete planning & execution of your events.</p>
+          class="service-card block bg-gradient-to-br from-[#0d3b47] to-[#124a57] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-transparent hover:border-cyan-400 group">
+          <div class="flex items-center space-x-4 mb-4">
+            <div class="service-icon w-12 h-12 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center">
+              <i data-lucide="calendar" class="w-6 h-6 text-white"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-cyan-400 group-hover:text-cyan-300">
+              Events Management
+            </h4>
+          </div>
+          <p class="text-gray-300 group-hover:text-white transition-colors">Complete planning & execution of your events with professional expertise.</p>
         </a>
 
         <a href="photography/photography.html"
-          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-            📸 Photography
-          </h4>
-          <p>Capturing memories with creativity and quality.</p>
+          class="service-card block bg-gradient-to-br from-[#0d3b47] to-[#124a57] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-transparent hover:border-cyan-400 group">
+          <div class="flex items-center space-x-4 mb-4">
+            <div class="service-icon w-12 h-12 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center">
+              <i data-lucide="camera" class="w-6 h-6 text-white"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-cyan-400 group-hover:text-cyan-300">
+              Photography
+            </h4>
+          </div>
+          <p class="text-gray-300 group-hover:text-white transition-colors">Capturing memories with creativity and professional quality equipment.</p>
         </a>
 
         <a href="video/video.html"
-          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-            📽️ Video Editing & Graphic Designing
-          </h4>
-          <p>Professional Video Editors & Graphic Designers at your service</p>
+          class="service-card block bg-gradient-to-br from-[#0d3b47] to-[#124a57] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-transparent hover:border-cyan-400 group">
+          <div class="flex items-center space-x-4 mb-4">
+            <div class="service-icon w-12 h-12 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center">
+              <i data-lucide="video" class="w-6 h-6 text-white"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-cyan-400 group-hover:text-cyan-300">
+              Video Editing & Graphics
+            </h4>
+          </div>
+          <p class="text-gray-300 group-hover:text-white transition-colors">Professional video editors & graphic designers at your service.</p>
         </a>
         
         <a href="marketing/marketing.html"
-          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-            📢 PR and Digital Marketing
-          </h4>
-          <p>Boost your brand with smart PR and targeted digital campaigns.</p>
+          class="service-card block bg-gradient-to-br from-[#0d3b47] to-[#124a57] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-transparent hover:border-cyan-400 group">
+          <div class="flex items-center space-x-4 mb-4">
+            <div class="service-icon w-12 h-12 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center">
+              <i data-lucide="megaphone" class="w-6 h-6 text-white"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-cyan-400 group-hover:text-cyan-300">
+              PR and Digital Marketing
+            </h4>
+          </div>
+          <p class="text-gray-300 group-hover:text-white transition-colors">Boost your brand with smart PR and targeted digital campaigns.</p>
         </a>
 
         <a href="website/website.html"
-          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-            💻 Web Design & Creation
-          </h4>
-          <p>Stylish and responsive websites built to impress.</p>
+          class="service-card block bg-gradient-to-br from-[#0d3b47] to-[#124a57] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-transparent hover:border-cyan-400 group">
+          <div class="flex items-center space-x-4 mb-4">
+            <div class="service-icon w-12 h-12 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center">
+              <i data-lucide="monitor" class="w-6 h-6 text-white"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-cyan-400 group-hover:text-cyan-300">
+              Web Design & Creation
+            </h4>
+          </div>
+          <p class="text-gray-300 group-hover:text-white transition-colors">Stylish and responsive websites built to impress and convert.</p>
         </a>
 
         <a href="ai.html"
-          class="relative block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
+          class="service-card relative block bg-gradient-to-br from-[#0d3b47] to-[#124a57] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-transparent hover:border-cyan-400 group">
         
           <!-- New Mark -->
           <span
-            class="absolute top-2 right-2 bg-cyan-400 text-[#0d3b47] text-xs font-bold px-2 py-1 rounded-full shadow">
-            NEW
+            class="absolute top-3 right-3 bg-gradient-to-r from-cyan-400 to-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center space-x-1">
+            <i data-lucide="star" class="w-3 h-3"></i>
+            <span>NEW</span>
           </span>
 
-          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-            🤖 AI and Automations 
-          </h4>
-          <p>Join us a AI Engineer.</p>
+          <div class="flex items-center space-x-4 mb-4">
+            <div class="service-icon w-12 h-12 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center">
+              <i data-lucide="bot" class="w-6 h-6 text-white"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-cyan-400 group-hover:text-cyan-300">
+              AI and Automations 
+            </h4>
+          </div>
+          <p class="text-gray-300 group-hover:text-white transition-colors">Join us as an AI Engineer and shape the future of technology.</p>
         </a>
       </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="py-16 bg-[#06333d] text-white">
+  <section id="about" class="py-20 bg-[#06333d] text-white">
     <div class="max-w-4xl mx-auto text-center px-4">
-      <h3 class="text-4xl font-bold mb-6 inline-block text-cyan-400 typing-text">
-        About Us
-      </h3>
-      <p class="text-gray-200 text-lg leading-relaxed hover:text-cyan-200 transition duration-300">
-        <span class="font-semibold text-cyan-400">Friends Consulting</span> is your all-in-one destination for creating unforgettable experiences. From mesmerizing events—sound, light, and food—to capturing timeless moments with our photography services, we bring creativity and precision to every event.<br /><br />
-        We also offer modern <span class="text-cyan-300">web design and creation</span> solutions, along with <span class="text-cyan-300">PR and digital marketing management</span> for the overall social management of the client and others.<br /><br />
-        So, if you’re planning a grand celebration or seeking <span class="text-cyan-300">career counseling</span>, our expert team ensures a seamless, professional experience from start to finish.<br /><br />
-        At Friends Consulting, we don’t just plan events—we craft memories that last for a lifetime.
-      </p>
+      <div class="flex items-center justify-center space-x-3 mb-8">
+        <i data-lucide="users" class="w-8 h-8 text-cyan-400"></i>
+        <h3 class="text-4xl font-bold text-cyan-400 typing-text">
+          About Us
+        </h3>
+        <i data-lucide="users" class="w-8 h-8 text-cyan-400"></i>
+      </div>
+      
+      <div class="bg-gradient-to-br from-[#0a3a47] to-[#0d4752] rounded-3xl p-8 md:p-12 shadow-2xl">
+        <p class="text-gray-200 text-lg leading-relaxed hover:text-cyan-200 transition duration-300">
+          <span class="font-semibold text-cyan-400">Friends Consulting</span> is your all-in-one destination for creating unforgettable experiences. From mesmerizing events—sound, light, and food—to capturing timeless moments with our photography services, we bring creativity and precision to every project.<br /><br />
+          
+          We also offer modern <span class="text-cyan-300 font-semibold">web design and creation</span> solutions, along with comprehensive <span class="text-cyan-300 font-semibold">PR and digital marketing management</span> for complete social media and brand management.<br /><br />
+          
+          Whether you're planning a grand celebration or seeking <span class="text-cyan-300 font-semibold">career counseling</span>, our expert team ensures a seamless, professional experience from start to finish.<br /><br />
+          
+          At Friends Consulting, we don't just plan events—we craft memories that last for a lifetime.
+        </p>
+        
+        <!-- Key Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 pt-8 border-t border-cyan-400/20">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="award" class="w-8 h-8 text-white"></i>
+            </div>
+            <h4 class="text-lg font-semibold text-cyan-300 mb-2">Excellence</h4>
+            <p class="text-gray-300 text-sm">Committed to delivering exceptional quality in every project</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="heart" class="w-8 h-8 text-white"></i>
+            </div>
+            <h4 class="text-lg font-semibold text-cyan-300 mb-2">Passion</h4>
+            <p class="text-gray-300 text-sm">Passionate about creating memorable experiences</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="target" class="w-8 h-8 text-white"></i>
+            </div>
+            <h4 class="text-lg font-semibold text-cyan-300 mb-2">Results</h4>
+            <p class="text-gray-300 text-sm">Focused on delivering measurable results for our clients</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-12 bg-[#06333d]">
-    <div class="max-w-5xl mx-auto px-4">
-      <div class="md:flex md:justify-between md:space-x-10">
-        <div class="md:w-1/2 mb-8 md:mb-0">
-          <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-          <p class="mb-4 text-lg">
-            <i class="fa-solid fa-envelope text-cyan-400 mr-2"></i>
-            friendsconsultinghelp@gmail.com
-          </p>
-          <p class="mb-4 text-lg">
-            <i class="fa-solid fa-phone text-cyan-400 mr-2"></i> +91 8420566682
-          </p>
-          <p class="mb-4 text-lg">
-            <i class="fa-solid fa-phone text-cyan-400 mr-2"></i> +91 8079048424
-          </p>
-          <div class="social-icons mt-6 space-x-4 text-2xl">
-            <a href="https://www.facebook.com/share/1Fo5D4eF7X/"
-              class="text-white text-2xl inline-block transition duration-300 transform hover:-translate-y-1 hover:text-blue-500"><i
-                class="fab fa-facebook"></i></a>
-
-            <a href="https://wa.me/918420566682"
-              class="text-white text-2xl inline-block transition duration-300 transform hover:-translate-y-1 hover:text-[#25D366]"><i
-                class="fab fa-whatsapp"></i></a>
-            <a href="https://t.me/friendsconsultinghelp"
-              class="text-white text-2xl inline-block transition duration-300 transform hover:-translate-y-1 hover:text-blue-600"><i
-                class="fab fa-telegram"></i></a>
-            <a href="https://www.instagram.com/friendsconsulting_/"
-              class="text-white text-2xl inline-block transition duration-300 transform hover:-translate-y-1 hover:text-pink-500"><i
-                class="fa-brands fa-instagram"></i></a>
+  <section id="contact" class="py-20 bg-[#06333d]">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <div class="flex items-center justify-center space-x-3 mb-4">
+          <i data-lucide="phone" class="w-8 h-8 text-cyan-400"></i>
+          <h2 class="text-4xl font-bold text-cyan-400">Contact Us</h2>
+          <i data-lucide="phone" class="w-8 h-8 text-cyan-400"></i>
+        </div>
+        <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+          Ready to bring your vision to life? Get in touch with our expert team today
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <!-- Contact Information -->
+        <div class="bg-gradient-to-br from-[#0a3a47] to-[#0d4752] rounded-3xl p-8 shadow-2xl">
+          <h3 class="text-2xl font-bold mb-8 text-white flex items-center space-x-3">
+            <i data-lucide="map-pin" class="w-6 h-6 text-cyan-400"></i>
+            <span>Get In Touch</span>
+          </h3>
+          
+          <!-- Email -->
+          <div class="mb-6 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center">
+                <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+              </div>
+              <div>
+                <p class="text-cyan-300 font-semibold mb-1">Email</p>
+                <p class="text-gray-200">friendsconsultinghelp@gmail.com</p>
+              </div>
+            </div>
           </div>
+
+          <!-- Phone Numbers -->
+          <div class="mb-6 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center">
+                <i data-lucide="phone-call" class="w-6 h-6 text-white"></i>
+              </div>
+              <div>
+                <p class="text-cyan-300 font-semibold mb-1">Phone</p>
+                <p class="text-gray-200">+91 8420566682</p>
+                <p class="text-gray-200">+91 8079048424</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="mb-8">
+            <h4 class="text-lg font-semibold mb-4 text-white flex items-center space-x-2">
+              <i data-lucide="share-2" class="w-5 h-5 text-cyan-400"></i>
+              <span>Follow Us</span>
+            </h4>
+            <div class="grid grid-cols-2 gap-4">
+              <a href="https://www.facebook.com/share/1Fo5D4eF7X/"
+                class="flex items-center space-x-3 p-3 bg-white/5 rounded-lg hover:bg-blue-600/20 transition-all group">
+                <i class="fab fa-facebook text-blue-500 text-xl group-hover:scale-110 transition-transform"></i>
+                <span class="text-gray-200 group-hover:text-blue-400">Facebook</span>
+              </a>
+
+              <a href="https://wa.me/918420566682"
+                class="flex items-center space-x-3 p-3 bg-white/5 rounded-lg hover:bg-green-600/20 transition-all group">
+                <i class="fab fa-whatsapp text-green-500 text-xl group-hover:scale-110 transition-transform"></i>
+                <span class="text-gray-200 group-hover:text-green-400">WhatsApp</span>
+              </a>
+
+              <a href="https://t.me/friendsconsultinghelp"
+                class="flex items-center space-x-3 p-3 bg-white/5 rounded-lg hover:bg-blue-500/20 transition-all group">
+                <i class="fab fa-telegram text-blue-400 text-xl group-hover:scale-110 transition-transform"></i>
+                <span class="text-gray-200 group-hover:text-blue-300">Telegram</span>
+              </a>
+
+              <a href="https://www.instagram.com/friendsconsulting_/"
+                class="flex items-center space-x-3 p-3 bg-white/5 rounded-lg hover:bg-pink-600/20 transition-all group">
+                <i class="fa-brands fa-instagram text-pink-500 text-xl group-hover:scale-110 transition-transform"></i>
+                <span class="text-gray-200 group-hover:text-pink-400">Instagram</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Business Card -->
           <a href="assets/businessCard.pdf" target="_blank"
-            class="inline-block mt-6 px-5 py-2 bg-cyan-600 text-white rounded-full hover:bg-[black] transition">
-            Business Card
+            class="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white rounded-xl hover:from-cyan-700 hover:to-cyan-800 transition-all shadow-lg hover:shadow-xl group">
+            <i data-lucide="credit-card" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+            <span class="font-medium">Download Business Card</span>
           </a>
         </div>
 
-        <div class="md:w-1/2">
-          <form name="submit-to-google-sheet">
-            <input type="text" name="Name" placeholder="Your Name" required
-              class="w-full bg-gray-800 text-white p-3 rounded mb-4" />
-            <input type="email" name="email" placeholder="Your Email" required
-              class="w-full bg-gray-800 text-white p-3 rounded mb-4" />
-            <textarea name="Message" rows="6" placeholder="Your Message"
-              class="w-full bg-gray-800 text-white p-3 rounded mb-4 resize-none"></textarea>
-            <button type="submit" class="px-6 py-2 bg-cyan-600 text-white rounded-full hover:bg-[black] transition">
-              Submit
+        <!-- Contact Form -->
+        <div class="bg-gradient-to-br from-[#0a3a47] to-[#0d4752] rounded-3xl p-8 shadow-2xl">
+          <h3 class="text-2xl font-bold mb-8 text-white flex items-center space-x-3">
+            <i data-lucide="send" class="w-6 h-6 text-cyan-400"></i>
+            <span>Send Message</span>
+          </h3>
+          
+          <form name="submit-to-google-sheet" class="space-y-6">
+            <div class="relative">
+              <div class="absolute left-3 top-3 text-gray-400">
+                <i data-lucide="user" class="w-5 h-5"></i>
+              </div>
+              <input 
+                type="text" 
+                name="Name" 
+                placeholder="Your Name" 
+                required
+                class="w-full bg-white/10 text-white p-3 pl-12 rounded-xl border border-white/20 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-all backdrop-blur-sm" 
+              />
+            </div>
+            
+            <div class="relative">
+              <div class="absolute left-3 top-3 text-gray-400">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="Your Email" 
+                required
+                class="w-full bg-white/10 text-white p-3 pl-12 rounded-xl border border-white/20 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-all backdrop-blur-sm" 
+              />
+            </div>
+            
+            <div class="relative">
+              <div class="absolute left-3 top-3 text-gray-400">
+                <i data-lucide="message-square" class="w-5 h-5"></i>
+              </div>
+              <textarea 
+                name="Message" 
+                rows="6" 
+                placeholder="Your Message"
+                class="w-full bg-white/10 text-white p-3 pl-12 rounded-xl border border-white/20 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-all backdrop-blur-sm resize-none"
+              ></textarea>
+            </div>
+            
+            <button 
+              type="submit" 
+              class="w-full flex items-center justify-center space-x-3 px-6 py-4 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white rounded-xl hover:from-cyan-700 hover:to-cyan-800 transition-all shadow-lg hover:shadow-xl font-semibold group">
+              <i data-lucide="send" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+              <span>Send Message</span>
             </button>
           </form>
-          <span id="msg" class="text-green-400 mt-3 block"></span>
+          
+          <div id="msg" class="text-green-400 mt-4 text-center font-medium flex items-center justify-center space-x-2">
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="mt-12 text-center bg-[#03272f] text-white py-4">
-    <p>
-      © friends Consulting. All rights reserved. Made with
-      <i class="fas fa-heart text-[#ff004f]"></i> by Rupam Ghosh & Abheek
-      Samaddar.
-    </p>
+  <footer class="bg-[#03272f] text-white py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center">
+        <div class="flex items-center justify-center space-x-3 mb-6">
+          <img src="assets/logo.png" alt="Logo" class="h-10 w-auto" />
+          <span class="text-xl font-bold">Friends Consulting</span>
+        </div>
+        
+        <div class="flex items-center justify-center space-x-2 text-gray-300 mb-4">
+          <span>© 2025 Friends Consulting. All rights reserved. Made with</span>
+          <i data-lucide="heart" class="w-4 h-4 text-red-500 fill-current"></i>
+          <span>by Rupam Ghosh & Abheek Samaddar.</span>
+        </div>
+        
+        <div class="flex items-center justify-center space-x-6 text-sm text-gray-400">
+          <a href="#" class="hover:text-cyan-400 transition-colors flex items-center space-x-1">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+            <span>Privacy Policy</span>
+          </a>
+          <a href="#" class="hover:text-cyan-400 transition-colors flex items-center space-x-1">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            <span>Terms of Service</span>
+          </a>
+          <a href="#contact" class="hover:text-cyan-400 transition-colors flex items-center space-x-1">
+            <i data-lucide="help-circle" class="w-4 h-4"></i>
+            <span>Support</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Show popup automatically on page load
+    window.onload = function() {
+      document.getElementById("imagePopup").classList.remove("hidden");
+      // Re-initialize Lucide icons after popup is shown
+      setTimeout(() => {
+        lucide.createIcons();
+      }, 100);
+    }
+
+    function closeImagePopup() {
+      document.getElementById("imagePopup").classList.add("hidden");
+    }
+
+    // Particle animation for hero section
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      
+      // Random size between 2-6px
+      const size = Math.random() * 4 + 2;
+      particle.style.width = size + 'px';
+      particle.style.height = size + 'px';
+      
+      // Random horizontal position
+      particle.style.left = Math.random() * 100 + '%';
+      
+      // Random animation duration between 10-20 seconds
+      const duration = Math.random() * 10 + 10;
+      particle.style.animation = `particleFloat ${duration}s linear infinite`;
+      
+      const particlesContainer = document.getElementById('particles');
+      if (particlesContainer) {
+        particlesContainer.appendChild(particle);
+        
+        // Remove particle after animation completes
+        setTimeout(() => {
+          if (particle.parentNode) {
+            particle.remove();
+          }
+        }, duration * 1000);
+      }
+    }
+    
+    // Create particles periodically
+    setInterval(createParticle, 300);
+    
+    // Create initial particles
+    for (let i = 0; i < 5; i++) {
+      setTimeout(createParticle, i * 100);
+    }
+
+    // Contact form handling with enhanced feedback
     const scriptURL = 'https://script.google.com/macros/s/AKfycbytxWTSr4FhzxP_rScD4d9Soj-Le_owfdM1RMFOCBtdFBpT1OxDVRt2-hfJCvuVzfXzHQ/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
 
     form.addEventListener('submit', e => {
       e.preventDefault()
+      
+      // Show loading state
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i><span>Sending...</span>';
+      submitBtn.disabled = true;
+      
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
-          msg.innerHTML = "Message sent successfully."
+          msg.innerHTML = '<i data-lucide="check-circle" class="w-5 h-5"></i><span>Message sent successfully!</span>';
+          msg.className = "text-green-400 mt-4 text-center font-medium flex items-center justify-center space-x-2";
           setTimeout(function () {
             msg.innerHTML = ""
           }, 5000)
           form.reset()
         })
-        .catch(error => console.error('Error!', error.message))
+        .catch(error => {
+          msg.innerHTML = '<i data-lucide="alert-circle" class="w-5 h-5"></i><span>Error sending message. Please try again.</span>';
+          msg.className = "text-red-400 mt-4 text-center font-medium flex items-center justify-center space-x-2";
+          console.error('Error!', error.message)
+        })
+        .finally(() => {
+          // Reset button state
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+          // Re-initialize icons
+          lucide.createIcons();
+        })
     })
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll effect to navbar
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 100) {
+        navbar.classList.add('bg-white/90');
+        navbar.classList.remove('bg-white/80');
+      } else {
+        navbar.classList.add('bg-white/80');
+        navbar.classList.remove('bg-white/90');
+      }
+    });
   </script>
 </body>
 </html>
